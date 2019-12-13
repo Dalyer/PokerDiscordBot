@@ -1,0 +1,24 @@
+# Test file for web scraping https://www.pokernow.club/games/GX1XyMQVUj1ASp9_NtVTPq-D3
+
+from requests_html import HTMLSession
+
+session = HTMLSession()
+
+r = session.get('https://python.org/')      # returns a set
+
+# finding an CSS Selector example
+about = r.html.find('#about', first=True)
+#
+# print(about.text)   # text in the element about
+# print(about.attrs)  # find attributes of a html element with id e.g. about
+#
+# print(about.html)   # print html for 'about' id
+#
+# print(about.find('a'))  # search for 'a' element in the about element
+#
+# print(about.absolute_links)  # search for links in elements
+#
+# text_search = r.html.search('Python is a {} language')[0]
+# print(text_search)
+x = r.html.xpath("//li[@id='about']//li[@class='tier-2 element-5']")
+print(x)
