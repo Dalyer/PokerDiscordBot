@@ -2,16 +2,18 @@ from requests_html import HTMLSession
 
 session = HTMLSession()
 
-GAME_LINK = "https://www.pokernow.club/games/XNA3A9xFNPpSuMFbUbz_n3KOY"
+GAME_LINK = "https://www.pokernow.club/games/IojGnljcV-evf1fkEEtLHkd5T"
 
 g = session.get(GAME_LINK)
 g.html.render()   # needed to load the javascript
 
 players = {}
+ROUND_COUNTER = 0
 
 # Make a dictionary of dictionaries for all the players
 for i in range(1, 10):
     j = i+2
+    #TODO next line doesn't work when scraper is the host?
     player = g.html.find(f'div:nth-child(1) div:nth-child(1) div.main-container.two-color div.table > div.table-player.table-player-{i}:nth-child({j})', first=True).text
     player = player.split('\n')
 
@@ -43,5 +45,7 @@ for i in range(1, 10):
 # 3. Folded players(DONE?)
 # 4. The Dealer/ buy ins(DONE)
 # 5. Dealer with Restarts(DONE)
+# 6. Deal with winning state where score is updated
+# possibly don't need any of this and can just run off of the log....
 print(players)
 
