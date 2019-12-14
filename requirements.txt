@@ -1,3 +1,4 @@
 discord.py
 selenium
 geckodriver (for firefox)
+python 3.6
