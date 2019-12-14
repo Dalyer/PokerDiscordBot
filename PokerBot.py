@@ -97,7 +97,7 @@ def get_scores(player=None, player_iden=None, discord_id=None):
         raise InputError # discord_id should always be provided
     # finish, io's
     
-    
+
 
     
 client.run(TOKEN)
