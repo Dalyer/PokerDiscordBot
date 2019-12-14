@@ -62,20 +62,23 @@ async def hulk(ctx):
 # Info Poker Start Command
 @client.command(pass_context=True)
 async def start(ctx):
-    link = seleniumScraper.start_poker_game()
+    link = seleniumScraper.start_poker_game()    # this has significant delay
     await client.say(f"Starting poker game at: {link}")
     # how to get stuff from the end of a message such as a link
     # make a spider to scrape the score from the poker link and check every minute
+
 
 # Poker End Command
 @client.command(pass_context=True)
 async def end(ctx):
     await client.say(f"Poker game on: {link} over scores recorded")
 
+
 # Poker scores
 @client.command(pass_context=True)
 async def scores(ctx):
     await client.say("scores")
+
 
 ########EVENTS########
 
