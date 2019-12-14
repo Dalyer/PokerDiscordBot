@@ -1,8 +1,6 @@
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 
-game_link = "https://www.pokernow.club/games/3tcFstG17zZqVTqIPdt9w1J36"
-
 
 def start_poker_game():
     driver = webdriver.Firefox()
