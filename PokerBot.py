@@ -44,8 +44,13 @@ async def logout(ctx):
 # list all commands command
 @client.command(pass_context=True)
 async def commands(ctx):
-    # have a list of all the public commands as a global variable
-    await client.say("Commands:to be updated")
+    # UPDATE THIS LIST
+    await client.say(f"Poker related commands:\n{bot_prefix}start: [no arguments]Generates a new poker game and returns a link\n
+                     {bot_prefix}end: [no arguments]Updates leaderboards and stops tracking the last game\n
+                     {bot_prefix}scores: [no arguments]Display the leaderboard\n
+                     {bot_prefix}get_score [player/player_identifier](no args=poster's score): More specfic individual player stats\n
+                     {bot_prefix}add [player_name] [discord_id] [player_identifier](no args=poster's discord id): add a player to leaderboard tracking\n
+                     ")
 
 
 # placeholder for the let it go meme
