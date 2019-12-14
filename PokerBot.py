@@ -90,5 +90,15 @@ async def on_ready():
     print("ID: {}".format(client.user.id))
     await client.change_presence(game=discord.Game(name='type !commands'))
 
+
+# Give the option to grab scores based on the players, identifiers, or discord ID
+def get_scores(player=None, player_iden=None, discord_id=None):
+    if (player, player_iden, disord_id) is None:
+        raise InputError # discord_id should always be provided
+    # finish, io's
+    
+    
+
+    
 client.run(TOKEN)
 
