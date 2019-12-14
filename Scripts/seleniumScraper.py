@@ -4,16 +4,43 @@ from selenium.webdriver.common.keys import Keys
 game_link = "https://www.pokernow.club/games/3tcFstG17zZqVTqIPdt9w1J36"
 
 
+def start_poker_game():
+    driver = webdriver.Firefox()
+    driver.get("https://www.pokernow.club")
+    useless_name = driver.find_element_by_css_selector('#player-name')
+    useless_name.clear()
+    useless_name.send_keys("BotBoy")
+    driver.find_element_by_css_selector(
+        'div:nth-child(1) div:nth-child(4) div.intro-main-form-container '
+        'form.main-form-1 > input.button-1:nth-child(5)').click()
+    driver.find_element_by_class_name('modal-button-close').click()
+    link = driver.find_element_by_css_selector('div:nth-child(1) div.main-container.two-color '
+                                               'div.table div.table-warning-ctn.waiting-players-ctn '
+                                               '> input:nth-child(2)').get_attribute('value')
+    driver.find_element_by_css_selector('div:nth-child(1) div:nth-child(1) '
+                                        'div.main-container.two-color div.top-buttons > '
+                                        'button.top-buttons-button.quit:nth-child(2)').click()
+    driver.find_element_by_css_selector('div.alert-1-container div.alert-1 '
+                                        'div.alert-1-buttons span:nth-child(1) > '
+                                        'button.button-1.gray:nth-child(1)').click()
+    return link
+
+
 def get_log_lines(link):
     driver = webdriver.Firefox()
     driver.get(link)
 
-    log_button = driver.find_element_by_css_selector('div:nth-child(1) div.main-container.two-color div.controls div.chat-and-log-ctn > button.button-1.show-log-button.small-button.dark-gray')
+    log_button = driver.find_element_by_css_selector('div:nth-child(1) div.main-container.two-color div.controls '
+                                                     'div.chat-and-log-ctn > '
+                                                     'button.button-1.show-log-button.small-button.dark-gray')
     popup_close = driver.find_element_by_class_name('modal-button-close')
     popup_close.click()
     log_button.click()
 
-    game_log = driver.find_elements_by_css_selector("div:nth-child(1) div:nth-child(1) div.main-container.two-color div.log-ctn > div.log-viewer")
+    game_log = driver.find_elements_by_css_selector("div:nth-child(1) div:nth-child(1) "
+                                                    "div.main-container.two-color div.log-ctn > div.log-viewer")
+
+    driver.close()
 
     log = game_log[0].text.split('\n')
 

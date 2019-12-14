@@ -3,6 +3,7 @@
 import os
 import discord
 from discord.ext import commands
+from Scripts import seleniumScraper
 
 # get tokens
 TOKEN = ""
@@ -61,6 +62,7 @@ async def hulk(ctx):
 # Info Poker Start Command
 @client.command(pass_context=True)
 async def start(ctx):
+    link = seleniumScraper.start_poker_game()
     await client.say(f"Starting poker game at: {link}")
     # how to get stuff from the end of a message such as a link
     # make a spider to scrape the score from the poker link and check every minute
