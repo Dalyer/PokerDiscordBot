@@ -74,6 +74,7 @@ async def end(ctx):
 @client.command(pass_context=True)
 async def scores(ctx):
     await client.say("scores")
+
 ########EVENTS########
 
 # Called when the bot connects to the server

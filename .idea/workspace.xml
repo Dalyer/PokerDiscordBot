@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ee113691-fa0d-4175-8810-11e2a6535c1f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/PokerGame.py" beforeDir="false" afterPath="$PROJECT_DIR$/PokerGame.py" afterDir="false" />
+    <list default="true" id="ee113691-fa0d-4175-8810-11e2a6535c1f" name="Default Changelist" comment="added workspace.xml">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PokerBot.py" beforeDir="false" afterPath="$PROJECT_DIR$/PokerBot.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/seleniumScraper.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/seleniumScraper.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -10,13 +12,16 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FavoritesManager">
+    <favorites_list name="PokerDiscordBot" />
+  </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/PokerBot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="875">
-              <caret line="76" column="22" lean-forward="true" selection-start-line="76" selection-start-column="22" selection-end-line="76" selection-end-column="22" />
+            <state relative-caret-position="306">
+              <caret line="54" lean-forward="true" selection-start-line="54" selection-end-line="54" />
               <folding>
                 <element signature="e#15#24#0" expanded="true" />
               </folding>
@@ -24,18 +29,52 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/PokerGame.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" selection-start-line="3" selection-end-line="3" />
+            <state relative-caret-position="34">
+              <caret line="2" selection-start-line="2" selection-end-line="2" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scores">
-          <provider selected="true" editor-type-id="text-editor" />
+        <entry file="file://$PROJECT_DIR$/tests/pokerScraper.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="512">
+              <caret line="38" selection-start-line="38" selection-end-line="39" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/tests/ScraperTest">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="12" column="14" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/tests/seleniumScraper.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="867">
+              <caret line="51" lean-forward="true" selection-start-line="51" selection-end-line="51" />
+              <folding>
+                <element signature="e#0#30#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="4" column="21" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -64,11 +103,14 @@
       <list>
         <option value="$PROJECT_DIR$/.gitignore.txt" />
         <option value="$PROJECT_DIR$/tests/config" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/config.txt" />
-        <option value="$PROJECT_DIR$/PokerBot.py" />
         <option value="$PROJECT_DIR$/scores" />
         <option value="$PROJECT_DIR$/PokerGame.py" />
+        <option value="$PROJECT_DIR$/tests/pokerScraper.py" />
+        <option value="$PROJECT_DIR$/tests/ScraperTest" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/tests/seleniumScraper.py" />
+        <option value="$PROJECT_DIR$/PokerBot.py" />
       </list>
     </option>
   </component>
@@ -84,7 +126,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -92,10 +133,16 @@
               <item name="PokerDiscordBot" type="b2602c69:ProjectViewProjectNode" />
               <item name="PokerDiscordBot" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="PokerDiscordBot" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PokerDiscordBot" type="462c0819:PsiDirectoryNode" />
+              <item name="tests" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -128,6 +175,10 @@
       <option name="presentableId" value="Default" />
       <updated>1576122008604</updated>
       <workItem from="1576122009820" duration="7124000" />
+      <workItem from="1576204758788" duration="11424000" />
+      <workItem from="1576261908790" duration="2206000" />
+      <workItem from="1576264524255" duration="7487000" />
+      <workItem from="1576277875598" duration="5108000" />
     </task>
     <task id="LOCAL-00001" summary="update">
       <created>1576125044958</created>
@@ -171,25 +222,96 @@
       <option name="project" value="LOCAL" />
       <updated>1576130058214</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="added .txt">
+      <created>1576204772745</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1576204772745</updated>
+    </task>
+    <task id="LOCAL-00008" summary="added workspace.xml">
+      <created>1576213890390</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1576213890390</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Started web scraper for default start state">
+      <created>1576213933293</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1576213933293</updated>
+    </task>
+    <task id="LOCAL-00010" summary="stuff">
+      <created>1576213952876</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1576213952876</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Added all the possible states. Pending play testing obviously">
+      <created>1576215708501</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1576215708501</updated>
+    </task>
+    <task id="LOCAL-00012" summary="added geckodriver.log">
+      <created>1576271179902</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1576271179902</updated>
+    </task>
+    <task id="LOCAL-00013" summary="added scores">
+      <created>1576271193370</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1576271193370</updated>
+    </task>
+    <task id="LOCAL-00014" summary="abandoned">
+      <created>1576271214652</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1576271214652</updated>
+    </task>
+    <task id="LOCAL-00015" summary="started scraper using selenium">
+      <created>1576271251862</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1576271251862</updated>
+    </task>
+    <task id="LOCAL-00016" summary="updated conditions">
+      <created>1576272054959</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1576272054959</updated>
+    </task>
+    <task id="LOCAL-00017" summary="added get_log_lines()">
+      <created>1576281472116</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1576281472116</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7124000" />
+    <option name="totallyTimeSpent" value="33349000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.4992636" visible="true" weight="0.26012793" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" />
-      <window_info anchor="bottom" id="Version Control" weight="0.32936078" />
-      <window_info anchor="bottom" id="Python Console" />
-      <window_info anchor="bottom" id="Messages" />
-      <window_info anchor="bottom" id="Terminal" sideWeight="0.49928367" weight="0.26435536" />
-      <window_info anchor="bottom" id="Event Log" sideWeight="0.5007163" side_tool="true" weight="0.4091521" />
+      <window_info id="Favorites" order="2" sideWeight="0.50073636" side_tool="true" weight="0.25746268" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -197,12 +319,19 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="JuliaSciView" />
-      <window_info anchor="right" id="SciView" />
-      <window_info anchor="right" id="Database" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="8" />
+      <window_info anchor="bottom" id="Messages" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5007163" side_tool="true" weight="0.4091521" />
+      <window_info anchor="bottom" id="Version Control" order="11" weight="0.32936078" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="12" sideWeight="0.49928367" visible="true" weight="0.26435536" />
+      <window_info anchor="bottom" id="Python Console" order="13" weight="0.32936078" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="JuliaSciView" order="3" />
+      <window_info anchor="right" id="SciView" order="4" />
+      <window_info anchor="right" id="Database" order="5" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -211,27 +340,33 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="update" />
     <MESSAGE value="added poker class" />
-    <option name="LAST_COMMIT_MESSAGE" value="added poker class" />
+    <MESSAGE value="added .txt" />
+    <MESSAGE value="added workspace.xml" />
+    <MESSAGE value="Started web scraper for default start state" />
+    <MESSAGE value="stuff" />
+    <MESSAGE value="Added all the possible states. Pending play testing obviously" />
+    <MESSAGE value="added geckodriver.log" />
+    <MESSAGE value="added scores" />
+    <MESSAGE value="abandoned" />
+    <MESSAGE value="started scraper using selenium" />
+    <MESSAGE value="updated conditions" />
+    <MESSAGE value="added get_log_lines()" />
+    <option name="LAST_COMMIT_MESSAGE" value="added get_log_lines()" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/tests/config">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="15" lean-forward="true" selection-start-line="3" selection-start-column="15" selection-end-line="3" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="2" selection-start-line="2" selection-start-column="2" selection-end-line="2" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/config" />
     <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
           <caret line="22" column="20" lean-forward="true" selection-start-line="22" selection-start-column="20" selection-end-line="22" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scores" />
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="21" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
         </state>
       </provider>
     </entry>
@@ -242,23 +377,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scores">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/tests/ScraperTest">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="14" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/pokerScraper.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="512">
+          <caret line="38" selection-start-line="38" selection-end-line="39" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PokerGame.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/PokerBot.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="875">
-          <caret line="76" column="22" lean-forward="true" selection-start-line="76" selection-start-column="22" selection-end-line="76" selection-end-column="22" />
+        <state relative-caret-position="306">
+          <caret line="54" lean-forward="true" selection-start-line="54" selection-end-line="54" />
           <folding>
             <element signature="e#15#24#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/PokerGame.py">
+    <entry file="file://$PROJECT_DIR$/tests/seleniumScraper.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        <state relative-caret-position="867">
+          <caret line="51" lean-forward="true" selection-start-line="51" selection-end-line="51" />
+          <folding>
+            <element signature="e#0#30#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

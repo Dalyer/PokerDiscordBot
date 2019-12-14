@@ -50,7 +50,6 @@ def get_log_lines(link):
     return game_data
 
 
-print(get_log_lines(game_link))
 
 
 
