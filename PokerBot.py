@@ -45,8 +45,14 @@ async def logout(ctx):
 # list all commands command
 @client.command(pass_context=True)
 async def commands(ctx):
-    # have a list of all the public commands as a global variable
-    await client.say("Commands:to be updated")
+    # UPDATE THIS LIST
+    await client.say(
+        f"Poker related commands:\n{bot_prefix}start: [no arguments]Generates a new poker game and returns a link\n"
+        f"{bot_prefix}end: [no arguments]Updates leaderboards and stops tracking the las tgame\n"
+        f"{bot_prefix}Display the leaderboard\n{bot_prefix}get_score[player / player_identifier]"
+        f"(noargs = poster's score): More specfic individual player stats\n"
+        f"{bot_prefix}add[player_name][discord_id][player_identifier]"
+        f"(noargs = poster's discord id): add a player to leaderboard tracking\n")
 
 
 # placeholder for the let it go meme
@@ -82,7 +88,7 @@ async def start(ctx):
 # Poker End Command
 @client.command(pass_context=True)
 async def end(ctx):
-    await client.say(f"Poker game on: {link} over scores recorded")
+    await client.say(f"Poker game on: {link} over scores recorded")   # add link soon
 
 
 # Poker scores
@@ -106,6 +112,13 @@ def load_scores():
     scores_file = os.path.join(dirName, 'scores.txt')
     scores = open(scores_file, encoding='utf-8', mode='r+')
     scores.close()
+
+
+# Give the option to grab scores based on the players, identifiers, or discord ID
+def get_scores(player=None, player_iden=None, discord_id=None):
+    if (player, player_iden, disord_id) is None:
+        raise InputError # discord_id should always be provided
+    # finish, io's
 
 
 client.run(TOKEN)
