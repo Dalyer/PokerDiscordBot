@@ -27,7 +27,7 @@ bot_prefix = "$"
 client = commands.Bot(command_prefix=bot_prefix)
 
 
-######COMMANDS######
+# #####COMMANDS######
 
 # ping command
 @client.command(pass_context=True)
@@ -115,10 +115,24 @@ async def end(ctx):
 # Poker scores
 @client.command(pass_context=True)
 async def scores(ctx):
-    await client.say("scores")
+    response = f"Current leader board:\n"
+    with open(SCORES_FILE, encoding='utf-8', mode='r') as f:
+        leader_board = []
+        for i in f:
+            i = i.split(',')
+            newdict = dict(id=i[1], score=int(i[2][0]), identifier=i[0])
+            leader_board.append(newdict)
+    # Sort scores
+    print(leader_board)
+    leader_board = sorted(leader_board, key=lambda x: x['score'], reverse=True)
+    print(leader_board)
+    for i in leader_board:
+        temp = f"{i['id']}:{i['score']}\n"
+        response += temp
+    await client.say(response)
 
 
-########EVENTS########
+# #######EVENTS########
 
 # Called when the bot connects to the server
 @client.event
@@ -127,19 +141,6 @@ async def on_ready():
     print("Name: {}".format(client.user.name))
     print("ID: {}".format(client.user.id))
     await client.change_presence(game=discord.Game(name='type $commands'))
-
-
-def load_scores():
-    scores_file = os.path.join(dirName, 'scores.txt')
-    scores = open(scores_file, encoding='utf-8', mode='r+')
-    scores.close()
-
-
-# Give the option to grab scores based on the players, identifiers, or discord ID
-def get_scores(player=None, player_iden=None, discord_id=None):
-    if (player, player_iden, discord_id) is None:
-        raise TypeError  # discord_id should always be provided
-    # finish, io's
 
 
 client.run(TOKEN)
