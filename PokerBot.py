@@ -70,14 +70,18 @@ async def hulk(ctx):
 @client.command(pass_context=True)
 async def add(ctx, player_iden, discord_name=None):
     # format in the text file (line start)PLAYER_IDENTIFIER,Discord_author,score
+    starting_score = 0
     with open(SCORES_FILE, encoding='utf-8', mode='r+') as f:
         if discord_name is None:
-            await client.say(f"{ctx.message.author} with identifier {player_iden} to the leader board")
-            f.write(f"{player_iden},{ctx.message.author},0")
-        elif discord_name[0] not in PLAYER_IDENTIFIERS:
-            await client.say("Please add a player identifier to the name")
-        else:
-            await client.say(f"adding {ctx.message.author}")
+            await client.say(f"Added {ctx.message.author} with identifier "
+                             f"{player_iden} to the leader board with a score of {starting_score}")
+            f.write(f"{player_iden},{ctx.message.author},{starting_score}")
+        elif player_iden[0] not in PLAYER_IDENTIFIERS:
+            await client.say(f"Please use a valid player identifier from {PLAYER_IDENTIFIERS}")
+        elif discord_name is not None:
+            await client.say(f"Added {discord_name} with identifier "
+                             f"{player_iden} to the leader board with a score of {starting_score}")
+            f.write(f"{player_iden},{discord_name},{starting_score}")
 
 
 # Info Poker Start Command
