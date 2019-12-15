@@ -5,7 +5,7 @@ import discord
 from discord.ext import commands
 from Scripts import seleniumScraper
 
-PLAYER_IDENTIFIERS = ['\'', '`', '~', '!', '@', '#', '$', '%', '^', '&', '*', '?']
+PLAYER_IDENTIFIERS = {'\'', '`', '~', '!', '@', '#', '$', '%', '^', '&', '*', '?'}
 # get tokens
 TOKEN = ""
 dirName = os.getcwd()
@@ -70,18 +70,31 @@ async def hulk(ctx):
 @client.command(pass_context=True)
 async def add(ctx, player_iden, discord_name=None):
     # format in the text file (line start)PLAYER_IDENTIFIER,Discord_author,score
+    if discord_name is None:
+        discord_name = ctx.message.author
     starting_score = 0
     with open(SCORES_FILE, encoding='utf-8', mode='r+') as f:
-        if discord_name is None:
-            await client.say(f"Added {ctx.message.author} with identifier "
+        # check if player identifier/discord_name is already in use
+        used_identifiers = set()
+        used_discord_names = []
+        for entry in f:
+            entry = entry.split(',')
+            used_identifiers.add(entry[0])
+            used_discord_names.append(entry[1])
+        if player_iden in used_identifiers:
+            await client.say(f"Identifier already in use. Choose from: {PLAYER_IDENTIFIERS - used_identifiers}")
+        elif discord_name in used_discord_names:
+            await client.say("Discord ID already in use.")
+        elif discord_name is None:
+            await client.say(f"Added {discord_name} with identifier "
                              f"{player_iden} to the leader board with a score of {starting_score}")
-            f.write(f"{player_iden},{ctx.message.author},{starting_score}")
+            f.write(f"{player_iden},{discord_name},{starting_score}\n")
         elif player_iden[0] not in PLAYER_IDENTIFIERS:
             await client.say(f"Please use a valid player identifier from {PLAYER_IDENTIFIERS}")
         elif discord_name is not None:
             await client.say(f"Added {discord_name} with identifier "
                              f"{player_iden} to the leader board with a score of {starting_score}")
-            f.write(f"{player_iden},{discord_name},{starting_score}")
+            f.write(f"{player_iden},{discord_name},{starting_score}\n")
 
 
 # Info Poker Start Command
