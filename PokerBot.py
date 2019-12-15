@@ -10,6 +10,7 @@ PLAYER_IDENTIFIERS = ['\'', '`', '~', '!', '@', '#', '$', '%', '^', '&', '*', '?
 TOKEN = ""
 dirName = os.getcwd()
 CONFIG_FILE = os.path.join(dirName, 'config.txt')
+SCORES_FILE = os.path.join(dirName, 'scores.txt')
 
 config = open(CONFIG_FILE, encoding='utf-8', mode='r')
 
@@ -48,11 +49,11 @@ async def commands(ctx):
     # UPDATE THIS LIST
     await client.say(
         f"Poker related commands:\n{bot_prefix}start: [no arguments]Generates a new poker game and returns a link\n"
-        f"{bot_prefix}end: [no arguments]Updates leaderboards and stops tracking the las tgame\n"
-        f"{bot_prefix}Display the leaderboard\n{bot_prefix}get_score[player / player_identifier]"
-        f"(noargs = poster's score): More specfic individual player stats\n"
+        f"{bot_prefix}end: [no arguments]Updates leader boards and stops tracking the las tgame\n"
+        f"{bot_prefix}Display the leader board\n{bot_prefix}get_score[player / player_identifier]"
+        f"(noargs = poster's score): More specific individual player stats\n"
         f"{bot_prefix}add[player_name][discord_id][player_identifier]"
-        f"(noargs = poster's discord id): add a player to leaderboard tracking\n")
+        f"(noargs = poster's discord id): add a player to leader board tracking\n")
 
 
 # placeholder for the let it go meme
@@ -67,13 +68,16 @@ async def hulk(ctx):
 
 
 @client.command(pass_context=True)
-async def add(ctx, player_name):
-    if player_name is None:
-        await client.say("Improper format")   # update to be more useful later
-    elif PLAYER_IDENTIFIERS != player_name[0]:
-        await client.say("Please add a player identifier to the name")
-    else:
-        await client.say(f"adding {player_name}")
+async def add(ctx, player_iden, discord_name=None):
+    # format in the text file (line start)PLAYER_IDENTIFIER,Discord_author,score
+    with open(SCORES_FILE, encoding='utf-8', mode='r+') as f:
+        if discord_name is None:
+            await client.say(f"{ctx.message.author} with identifier {player_iden} to the leader board")
+            f.write(f"{player_iden},{ctx.message.author},0")
+        elif discord_name[0] not in PLAYER_IDENTIFIERS:
+            await client.say("Please add a player identifier to the name")
+        else:
+            await client.say(f"adding {ctx.message.author}")
 
 
 # Info Poker Start Command
@@ -116,8 +120,8 @@ def load_scores():
 
 # Give the option to grab scores based on the players, identifiers, or discord ID
 def get_scores(player=None, player_iden=None, discord_id=None):
-    if (player, player_iden, disord_id) is None:
-        raise InputError # discord_id should always be provided
+    if (player, player_iden, discord_id) is None:
+        raise TypeError  # discord_id should always be provided
     # finish, io's
 
 
