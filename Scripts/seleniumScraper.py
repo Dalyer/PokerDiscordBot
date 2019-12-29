@@ -12,7 +12,7 @@ def start_poker_game():
     useless_name.send_keys("BotBoy")
     driver.find_element_by_css_selector(
         'div:nth-child(1) div:nth-child(4) div.intro-main-form-container '
-        'form.main-form-1 > input.button-1:nth-child(5)').click()
+        'form.main-form-1 > input.button-1:nth-child(4)').click()
     driver.find_element_by_class_name('modal-button-close').click()
     link = driver.find_element_by_css_selector('div:nth-child(1) div.main-container.two-color '
                                                'div.table div.table-warning-ctn.waiting-players-ctn '
