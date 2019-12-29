@@ -7,6 +7,7 @@ from Scripts import seleniumScraper
 
 PLAYER_IDENTIFIERS = {'\'', '`', '~', '!', '@', '#', '$', '%', '^', '&', '*', '?'}
 # get tokens
+CURRENT_GAME_LINK = None
 TOKEN = ""
 dirName = os.getcwd()
 CONFIG_FILE = os.path.join(dirName, 'config.txt')
@@ -100,8 +101,8 @@ async def add(ctx, player_iden, discord_name=None):
 # Info Poker Start Command
 @client.command(pass_context=True)
 async def start(ctx):
-    link = seleniumScraper.start_poker_game()    # this has significant delay
-    await client.say(f"Starting poker game at: {link}")
+    CURRENT_GAME_LINK = seleniumScraper.start_poker_game()  # this has significant delay
+    await client.say(f"Starting poker game at: {CURRENT_GAME_LINK}")
     # how to get stuff from the end of a message such as a link
     # make a spider to scrape the score from the poker link and check every minute
 
@@ -109,7 +110,10 @@ async def start(ctx):
 # Poker End Command
 @client.command(pass_context=True)
 async def end(ctx):
-    await client.say(f"Poker game on: {link} over scores recorded")   # add link soon
+    if CURRENT_GAME_LINK is not None:
+        await client.say(f"Poker game on: {CURRENT_GAME_LINK} over scores recorded")  # add link soon
+    else:
+        await client.say("No poker game active. Use $start to generate a link.")
 
 
 # Poker scores
