@@ -103,8 +103,6 @@ async def add(ctx, player_iden, discord_name=None):
 async def start(ctx):
     CURRENT_GAME_LINK = seleniumScraper.start_poker_game()  # this has significant delay
     await client.say(f"Starting poker game at: {CURRENT_GAME_LINK}")
-    # how to get stuff from the end of a message such as a link
-    # make a spider to scrape the score from the poker link and check every minute
 
 
 # Poker End Command
