@@ -109,9 +109,12 @@ async def start(ctx):
 @client.command(pass_context=True)
 async def end(ctx):
     if CURRENT_GAME_LINK is not None:
-        await client.say(f"Poker game on: {CURRENT_GAME_LINK} over scores recorded")  # add link soon
+        await client.say(f"Poker game on: {CURRENT_GAME_LINK} over, scores recorded")
+
     else:
         await client.say("No poker game active. Use $start to generate a link.")
+    global CURRENT_GAME_LINK
+    CURRENT_GAME_LINK = None
 
 
 # Poker scores
@@ -144,5 +147,6 @@ async def on_ready():
     print("ID: {}".format(client.user.id))
     await client.change_presence(game=discord.Game(name='type $commands'))
 
+# #######POKER GAME FUNCTIONS######### #
 
 client.run(TOKEN)
