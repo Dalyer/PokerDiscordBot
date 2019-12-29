@@ -101,6 +101,7 @@ async def add(ctx, player_iden, discord_name=None):
 # Info Poker Start Command
 @client.command(pass_context=True)
 async def start(ctx):
+    global CURRENT_GAME_LINK
     CURRENT_GAME_LINK = seleniumScraper.start_poker_game()  # this has significant delay
     await client.say(f"Starting poker game at: {CURRENT_GAME_LINK}")
 
@@ -147,6 +148,10 @@ async def on_ready():
     print("ID: {}".format(client.user.id))
     await client.change_presence(game=discord.Game(name='type $commands'))
 
+
 # #######POKER GAME FUNCTIONS######### #
+def parse_game_log(log_lines):
+    pass
+
 
 client.run(TOKEN)
