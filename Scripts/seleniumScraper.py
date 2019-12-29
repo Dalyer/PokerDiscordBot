@@ -95,7 +95,7 @@ def parse_game_log_test(link):
                 # determine valid player stack changes
                 if i['action_type'] == "win":      # positive stack changes
                     score_change = i['stack_change']
-                elif i['action_type'] in ['calls', 'raises']:  # negative stack changes
+                elif i['action_type'] == 'calls':  # negative stack changes
                     if player['last_action']['action_type'] == 'blind':      # case 2
                         score_change = (i['stack_change'] - int(player['last_action']['stack_change'])) * -1
                     elif player['last_action']['action_type'] == 'calls':    # case 3
@@ -106,6 +106,17 @@ def parse_game_log_test(link):
                             score_change = i['stack_change'] * -1
                     elif player['last_action']['action_type'] == 'raises':
                         score_change = (i['stack_change'] - int(player['last_action']['stack_change'])) * -1
+                    else:
+                        score_change = i['stack_change'] * -1
+                elif i['action_type'] == 'raises':
+                    if player['last_action']['action_type'] != 'blind':
+                        score_change = i['stack_change'] * -1
+                    elif player['last_action']['action_type'] == 'calls':    # case 3
+                        # check if new betting round has began or its looped
+                        if player['betting_seq_num'] == seq_last_cycle:
+                            score_change = (i['stack_change'] - int(player['last_action']['stack_change'])) * -1
+                        else:
+                            score_change = i['stack_change'] * -1
                     else:
                         score_change = i['stack_change'] * -1
                 else:       # case 1
