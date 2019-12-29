@@ -154,4 +154,12 @@ def parse_game_log(log_lines):
     pass
 
 
+def get_players():
+    pass
+
+
+def update_scores():
+    pass
+
+
 client.run(TOKEN)
