@@ -46,7 +46,7 @@ def get_log_lines(link):
     game_data = {}
     seq_num = -1
     for line in log:
-        seq_num += seq_num
+        seq_num += 1
         action = line.split()
         # find integer values
         value = 0
