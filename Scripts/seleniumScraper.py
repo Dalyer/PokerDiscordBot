@@ -64,6 +64,8 @@ def get_log_lines(link):
                 action_type = 'blind'
             elif i == 'wins' or i == 'gained':
                 action_type = "win"
+            elif i in ['turn', 'flop', 'river', 'starting']:
+                action_type = 'round_end'
         if action_type != "":
             newdict = dict(time=action[0], player=action[1][0], stack_change=int(value), action_type=action_type, seq_num=seq_num)
         else:
