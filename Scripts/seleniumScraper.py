@@ -40,8 +40,6 @@ def get_log_lines(link):
     game_log = driver.find_elements_by_css_selector("div:nth-child(1) div:nth-child(1) "
                                                     "div.main-container.two-color div.log-ctn > div.log-viewer")
 
-    driver.close()
-
     log = game_log[0].text.split('\n')
 
     log.reverse()       # reverse order so it is sequential
@@ -74,9 +72,16 @@ def get_log_lines(link):
         temp = "Line" + str(seq_num)
         game_data[temp] = newdict
 
+    driver.close()
     return game_data
 
 
+def parse_game_log_test(link):
+    log_lines = get_log_lines(link)
+    print(log_lines)
+
+
+parse_game_log_test(full_game_test_link)
 
 
 
