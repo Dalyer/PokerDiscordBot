@@ -43,7 +43,7 @@ def get_log_lines(link):
     log = game_log[0].text.split('\n')
 
     log.reverse()       # reverse order so it is sequential
-    game_data = {}
+    game_data = []
     seq_num = -1
     for line in log:
         seq_num += 1
@@ -68,9 +68,7 @@ def get_log_lines(link):
             newdict = dict(time=action[0], player=action[1], stack_change=value, action_type=action_type, seq_num=seq_num)
         else:
             continue
-
-        temp = "Line" + str(seq_num)
-        game_data[temp] = newdict
+        game_data.append(newdict)
 
     driver.close()
     return game_data
