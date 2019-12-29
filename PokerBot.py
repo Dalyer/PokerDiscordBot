@@ -155,7 +155,13 @@ def parse_game_log(log_lines):
 
 
 def get_players():
-    pass
+    with open(SCORES_FILE, encoding='utf-8', mode='r') as f:
+        players = []
+        for i in f:
+            line.split(',')
+            newdict = dict(id=i[1], score=int(i[2][0]), identifier=i[0])
+            players.append(newdict)
+    return players
 
 
 def update_scores():
