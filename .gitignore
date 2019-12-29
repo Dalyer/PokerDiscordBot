@@ -3,3 +3,4 @@
 **config.txt
 **workspace.xml
 tests/geckodriver.log
+*/geckodriver.log
