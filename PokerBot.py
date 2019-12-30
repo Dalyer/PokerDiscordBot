@@ -139,7 +139,7 @@ async def scores(ctx):
     leader_board = sorted(leader_board, key=lambda x: x['score'], reverse=True)
     print(leader_board)
     for i in leader_board:          # TODO add a proper table
-        temp = f"{i['id']} | Score = {i['score']} | Hands Won = {i['games_won']} |\n"
+        temp = f"{i['id']} | Score = {i['score']} | Hands Won = {i['games_won']} | \n"
         response += temp
     await client.say(response)
 
