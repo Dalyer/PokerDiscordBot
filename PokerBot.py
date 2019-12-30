@@ -54,7 +54,8 @@ async def commands(ctx):
         f"{bot_prefix}Display the leader board\n{bot_prefix}get_score[player / player_identifier]"
         f"(noargs = poster's score): More specific individual player stats\n"
         f"{bot_prefix}add[player_name][discord_id][player_identifier]"
-        f"(noargs = poster's discord id): add a player to leader board tracking\n")
+        f"(noargs = poster's discord id): add a player to leader board tracking\n"
+        f"{bot_prefix}how: tells ya how")
 
 
 # placeholder for the let it go meme
@@ -141,6 +142,22 @@ async def scores(ctx):
         temp = f"{i['id']}:{i['score']}\n"
         response += temp
     await client.say(response)
+
+
+@client.command(pass_context=True)
+async def how(ctx):
+    await client.say(f"How to get started\n"
+                     f"1. Make sure to add yourself to the leader board using the{bot_prefix}add command\n"
+                     f"2. Use the {bot_prefix}start command to start a poker game, use the link provided\n"
+                     f"3. In order to have your score properly tracked you NEED to include your chosen PLAYER"
+                     f" IDENTIFIER at the beginning of your in-game name"
+                     f"4. Once you want to stop tracking the game use the {bot_prefix}end command")
+
+
+@client.command(pass_context=True)
+async def errors(ctx):
+    await client.say("This hasn't been tested properly so I wouldn't be surprised if there is some weird behaviour"
+                     "just send me a DM with any errors at Dalyer#5373")
 
 
 # #######EVENTS########
