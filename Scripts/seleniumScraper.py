@@ -55,6 +55,7 @@ def get_log_lines(link):
         for i in action:
             if i.isdigit():
                 value = i
+                break
         # get action type
         for i in action:
             if i == 'calls':
@@ -67,7 +68,7 @@ def get_log_lines(link):
                 action_type = "win"
             elif i in ['turn:', 'flop:', 'river:', 'starting']:
                 betting_cycle += 1
-                action_type = 'round_end'
+
         if action_type != "":
             newdict = dict(time=action[0], player=action[1][0], stack_change=int(value), action_type=action_type, seq_num=seq_num, betting_cycle=betting_cycle)
         else:
@@ -82,14 +83,15 @@ def parse_game_log_test(link):
     log_lines = get_log_lines(link)
     print(log_lines)
     # trackable_players = get_players() here, add tests
-    player1 = dict(id='david', identifier='~', score=0, last_action=dict(action_type=None, betting_cycle=1, games_won=0))
-    player2 = dict(id='TEST', identifier='#', score=0, last_action=dict(action_type=None, betting_cycle=1, games_won=0))
-    player3 = dict(id='DALYER', identifier='^', score=0, last_action=dict(action_type=None, betting_cycle=1, games_won=0))
+    player1 = dict(id='david', identifier='~', score=0, last_action=dict(action_type=None, betting_cycle=1), games_won=0)
+    player2 = dict(id='TEST', identifier='#', score=0, last_action=dict(action_type=None, betting_cycle=1), games_won=0)
+    player3 = dict(id='DALYER', identifier='^', score=0, last_action=dict(action_type=None, betting_cycle=1), games_won=0)
     players_test = [player1, player2, player3]
 
     for i in log_lines:
         for player in players_test:
             if i['player'] == player['identifier']:
+                score_change = 0
                 # determine valid player stack changes
                 if i['action_type'] == "win":      # positive stack changes
                     score_change = i['stack_change']
@@ -108,7 +110,10 @@ def parse_game_log_test(link):
                         else:
                             score_change = i['stack_change'] * -1
                     elif player['last_action']['action_type'] == 'raises':
-                        score_change = (i['stack_change'] - int(player['last_action']['stack_change'])) * -1
+                        if i['betting_cycle'] == player['last_action']['betting_cycle']:
+                            score_change = (i['stack_change'] - int(player['last_action']['stack_change'])) * -1
+                        else:
+                            score_change = i['stack_change'] * -1
                     else:
                         score_change = i['stack_change'] * -1
 
@@ -120,13 +125,18 @@ def parse_game_log_test(link):
                             score_change = (i['stack_change'] - int(player['last_action']['stack_change'])) * -1
                     elif player['last_action']['action_type'] == 'calls':    # case 3
                         # check if new betting round has began or its looped
-                        if i['betting_cycle'] != player['last_action']['betting_cycle']:
+                        if i['betting_cycle'] == player['last_action']['betting_cycle']:
+                            score_change = (i['stack_change'] - int(player['last_action']['stack_change'])) * -1
+                        else:
+                            score_change = i['stack_change'] * -1
+                    elif player['last_action']['action_type'] == 'raises':
+                        if i['betting_cycle'] == player['last_action']['betting_cycle']:
                             score_change = (i['stack_change'] - int(player['last_action']['stack_change'])) * -1
                         else:
                             score_change = i['stack_change'] * -1
                     else:
                         score_change = i['stack_change'] * -1
-                else:       # case 1
+                elif i['action_type'] == 'blind':       # case 1
                     score_change = i['stack_change'] * -1
                 player['score'] = player['score'] + score_change
                 print(player['score'], player['id'], i['action_type'], (player['last_action']['action_type']), i['betting_cycle'], player['last_action']['betting_cycle'])
