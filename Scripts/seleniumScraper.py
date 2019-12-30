@@ -60,7 +60,6 @@ def accept_seat_requests(driver):
                 driver.find_element_by_css_selector('div:nth-child(1) div.main-container.two-color div.controls '
                                                     'div.action-buttons.right-controls > button.button-1.green').click()
                 last_start_message = message[1]
-            print(message.text.split())
         except selenium.common.exceptions.NoSuchElementException:
             pass
 
