@@ -1,5 +1,6 @@
 from selenium import webdriver
-from selenium.webdriver.common.keys import Keys
+import time
+import selenium
 
 full_game_test_link = "https://www.pokernow.club/games/oDuvG8l90-TT1vi8cZOAIK7lh"  #  # "https://www.pokernow.club/games/oct_JAkdI3LIyZu-uBsuShMbm"
 
@@ -13,6 +14,7 @@ def start_poker_game():
     driver.find_element_by_css_selector(
         'div:nth-child(1) div:nth-child(4) div.intro-main-form-container '
         'form.main-form-1 > input.button-1:nth-child(4)').click()
+    time.sleep(0.25)
     driver.find_element_by_class_name('modal-button-close').click()
     link = driver.find_element_by_css_selector('div:nth-child(1) div.main-container.two-color '
                                                'div.table div.table-warning-ctn.waiting-players-ctn '
@@ -23,7 +25,28 @@ def start_poker_game():
     driver.find_element_by_css_selector('div.alert-1-container div.alert-1 '
                                         'div.alert-1-buttons span:nth-child(1) > '
                                         'button.button-1.gray:nth-child(1)').click()
-    return link
+    return link, driver
+
+
+def accept_seat_requests(driver):
+    # driver.find_element_by_class_name('modal-button-close').click()
+    driver.find_element_by_css_selector('div:nth-child(1) div:nth-child(1) div.main-container.two-color '
+                                        'div.top-buttons > button.top-buttons-button.options').click()
+
+    for i in range(1, 10):
+        try:
+            driver.find_element_by_css_selector(f'div:nth-child(1) div.main-container div.config-content '
+                                                f'div.config-player-row.request-game-ingress:nth-child({i}) > '
+                                                f'button.button-1.config-action-button').click()
+            driver.find_element_by_css_selector('div.main-container div.config-content '
+                                                'div.config-player-column.config-col-1:nth-child(2) '
+                                                'form.form-1 > button.button-1').click()
+            driver.find_element_by_css_selector('div:nth-child(1) div.alert-1-container div.alert-1 '
+                                                'div.alert-1-buttons > span:nth-child(1)').click()
+        except selenium.common.exceptions.NoSuchElementException:
+            pass
+    driver.find_element_by_css_selector('div:nth-child(1) div:nth-child(1) div.main-container '
+                                        'div.config-top-tabs > button.config-top-tab-buttton.back:nth-child(1)').click()
 
 
 def get_log_lines(link):
