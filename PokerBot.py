@@ -51,8 +51,7 @@ async def commands(ctx):
     await client.say(
         f"Poker related commands:\n{bot_prefix}start: [no arguments]Starts a new poker game and returns a link\n"
         f"{bot_prefix}end: [no arguments]Updates leader boards and stops tracking the last game\n"
-        f"{bot_prefix}Display the leader board\n{bot_prefix}get_score[player / player_identifier]"
-        f"(noargs = poster's score): More specific individual player stats\n"
+        f"{bot_prefix}scores Display the leader board\n"
         f"{bot_prefix}add[player_name][discord_id][player_identifier]"
         f"(noargs = poster's discord id): add a player to leader board tracking\n"
         f"{bot_prefix}how: tells ya how\n"
@@ -139,8 +138,8 @@ async def scores(ctx):
     print(leader_board)
     leader_board = sorted(leader_board, key=lambda x: x['score'], reverse=True)
     print(leader_board)
-    for i in leader_board:
-        temp = f"{i['id']}:{i['score']}\n"
+    for i in leader_board:          # TODO add a proper table
+        temp = f"{i['id']} | Score = {i['score']} | Hands Won = {i['games_won']} |\n"
         response += temp
     await client.say(response)
 
@@ -151,7 +150,7 @@ async def how(ctx):
                      f"1. Make sure to add yourself to the leader board using the{bot_prefix}add command\n"
                      f"2. Use the {bot_prefix}start command to start a poker game, use the link provided\n"
                      f"3. In order to have your score properly tracked you NEED to include your chosen PLAYER"
-                     f" IDENTIFIER at the beginning of your in-game name"
+                     f" IDENTIFIER at the beginning of your in-game name\n"
                      f"4. Once you want to stop tracking the game use the {bot_prefix}end command")
 
 
@@ -227,7 +226,8 @@ def parse_game_log(log_lines):
                 elif i['action_type'] == 'blind':       # case 1
                     score_change = i['stack_change'] * -1
                 player['score'] = player['score'] + score_change
-                print(player['score'], player['id'], i['action_type'], (player['last_action']['action_type']), i['betting_cycle'], player['last_action']['betting_cycle'])
+                print(player['score'], player['id'], i['action_type'], (player['last_action']['action_type']),
+                      i['betting_cycle'], player['last_action']['betting_cycle'])
                 player['last_action'] = i
     return trackable_players
 
@@ -238,7 +238,8 @@ def get_players():
         for i in f:
             i = i.split(',')
             # initialize betting cycles
-            newdict = dict(id=i[1], score=int(i[2]), identifier=i[0], games_won=int(i[3]), last_action=dict(action_type=None, betting_cycle=1))
+            newdict = dict(id=i[1], score=int(i[2]), identifier=i[0], games_won=int(i[3]),
+                           last_action=dict(action_type=None, betting_cycle=1))
             players.append(newdict)
     return players
 
