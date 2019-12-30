@@ -1,7 +1,7 @@
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 
-full_game_test_link = "https://www.pokernow.club/games/oct_JAkdI3LIyZu-uBsuShMbm"# "https://www.pokernow.club/games/oDuvG8l90-TT1vi8cZOAIK7lh"  #  #
+full_game_test_link = "https://www.pokernow.club/games/oDuvG8l90-TT1vi8cZOAIK7lh"  #  # "https://www.pokernow.club/games/oct_JAkdI3LIyZu-uBsuShMbm"
 
 
 def start_poker_game():
@@ -83,7 +83,8 @@ def parse_game_log_test(link):
     print(log_lines)
     # trackable_players = get_players() here, add tests
     player1 = dict(id='david', identifier='~', score=0, last_action=dict(action_type=None, betting_cycle=1))
-    player2 = dict(id='TEST', identifier='R', score=0, last_action=dict(action_type=None, betting_cycle=1))
+    player2 = dict(id='TEST', identifier='#', score=0, last_action=dict(action_type=None, betting_cycle=1))
+    player3 = dict(id='DALYER', identifier='^', score=0, last_action=dict(action_type=None, betting_cycle=1))
     players_test = [player1, player2]
 
     for i in log_lines:
