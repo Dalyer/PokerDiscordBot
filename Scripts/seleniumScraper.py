@@ -145,7 +145,6 @@ def parse_game_log_test(link):
     print(players_test[0]['score'], players_test[1]['score'], players_test[2]['score'])
 
 
-parse_game_log_test(full_game_test_link)
 
 
 
