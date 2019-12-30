@@ -142,6 +142,8 @@ def parse_game_log_test(link):
                 print(player['score'], player['id'], i['action_type'], (player['last_action']['action_type']), i['betting_cycle'], player['last_action']['betting_cycle'])
                 player['last_action'] = i
 
+    print(players_test[0]['score'], players_test[1]['score'], players_test[2]['score'])
+
 
 parse_game_log_test(full_game_test_link)
 
