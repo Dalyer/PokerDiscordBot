@@ -55,7 +55,8 @@ async def commands(ctx):
         f"(noargs = poster's score): More specific individual player stats\n"
         f"{bot_prefix}add[player_name][discord_id][player_identifier]"
         f"(noargs = poster's discord id): add a player to leader board tracking\n"
-        f"{bot_prefix}how: tells ya how")
+        f"{bot_prefix}how: tells ya how\n"
+        f"{bot_prefix}errors: Where to send errors")
 
 
 # placeholder for the let it go meme
