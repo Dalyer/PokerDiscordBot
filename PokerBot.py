@@ -1,6 +1,7 @@
 # PokerBot.py
 
 import os
+import asyncio
 import discord
 from discord.ext import commands
 from Scripts import seleniumScraper
@@ -8,6 +9,7 @@ from Scripts import seleniumScraper
 PLAYER_IDENTIFIERS = {'\'', '`', '~', '!', '@', '#', '$', '%', '^', '&', '*', '?'}
 # get tokens
 CURRENT_GAME_LINK = None
+GAME_DRIVER = None
 TOKEN = ""
 dirName = os.getcwd()
 CONFIG_FILE = os.path.join(dirName, 'config.txt')
@@ -103,25 +105,31 @@ async def add(ctx, player_iden, discord_name=None):
 # Info Poker Start Command
 @client.command(pass_context=True)
 async def start(ctx):           # TODO major error, can't approve new seats with out the original window
-    global CURRENT_GAME_LINK
-    CURRENT_GAME_LINK = seleniumScraper.start_poker_game()  # this has significant delay
+    global CURRENT_GAME_LINK, GAME_DRIVER
+    [CURRENT_GAME_LINK, GAME_DRIVER] = seleniumScraper.start_poker_game() # this has significant delay
     await client.say(f"Starting poker game at: {CURRENT_GAME_LINK}")
+
+    # add new players to the game
+    while CURRENT_GAME_LINK is not None:
+        await asyncio.sleep(5)
+        seleniumScraper.accept_seat_requests(GAME_DRIVER)
 
 
 # Poker End Command
 @client.command(pass_context=True)
 async def end(ctx):
-    global CURRENT_GAME_LINK
+    global CURRENT_GAME_LINK, GAME_DRIVER
     if CURRENT_GAME_LINK is not None:
         log_lines = seleniumScraper.get_log_lines(CURRENT_GAME_LINK)
         new_scores = parse_game_log(log_lines)
         update_scores(new_scores)
+        GAME_DRIVER.close()
         await client.say(f"Poker game over, scores recorded")
-
     else:
         await client.say("No poker game active. Use $start to generate a link.")
 
     CURRENT_GAME_LINK = None
+    GAME_DRIVER = None
 
 
 # Poker scores
