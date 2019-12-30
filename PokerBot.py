@@ -127,7 +127,7 @@ async def scores(ctx):
         leader_board = []
         for i in f:
             i = i.split(',')
-            newdict = dict(id=i[1], score=int(i[2][0]), identifier=i[0])
+            newdict = dict(id=i[1], score=int(i[2][0]), identifier=i[0], games_won=i[3])
             leader_board.append(newdict)
     # Sort scores
     print(leader_board)
