@@ -102,7 +102,7 @@ async def add(ctx, player_iden, discord_name=None):
 
 # Info Poker Start Command
 @client.command(pass_context=True)
-async def start(ctx):
+async def start(ctx):           # TODO major error, can't approve new seats with out the original window
     global CURRENT_GAME_LINK
     CURRENT_GAME_LINK = seleniumScraper.start_poker_game()  # this has significant delay
     await client.say(f"Starting poker game at: {CURRENT_GAME_LINK}")
