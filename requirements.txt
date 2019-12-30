@@ -1,4 +1,4 @@
-discord.py
+discord.py (v0.16.12)
 selenium
 geckodriver (for firefox)
 python 3.6
