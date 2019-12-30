@@ -110,12 +110,13 @@ async def start(ctx):
 # Poker End Command
 @client.command(pass_context=True)
 async def end(ctx):
+    global CURRENT_GAME_LINK
     if CURRENT_GAME_LINK is not None:
         await client.say(f"Poker game on: {CURRENT_GAME_LINK} over, scores recorded")
 
     else:
         await client.say("No poker game active. Use $start to generate a link.")
-    global CURRENT_GAME_LINK
+
     CURRENT_GAME_LINK = None
 
 
@@ -127,7 +128,7 @@ async def scores(ctx):
         leader_board = []
         for i in f:
             i = i.split(',')
-            newdict = dict(id=i[1], score=int(i[2][0]), identifier=i[0], games_won=i[3])
+            newdict = dict(id=i[1], score=int(i[2]), identifier=i[0], games_won=i[3])
             leader_board.append(newdict)
     # Sort scores
     print(leader_board)
@@ -152,15 +153,71 @@ async def on_ready():
 
 # #######POKER GAME FUNCTIONS######### #
 def parse_game_log(log_lines):
-    pass
+    trackable_players = get_players()
+
+    for i in log_lines:
+        for player in trackable_players:
+            if i['player'] == player['identifier']:
+                score_change = 0
+                # determine valid player stack changes
+                if i['action_type'] == "win":      # positive stack changes
+                    score_change = i['stack_change']
+                    player['games_won'] += 1
+
+                elif i['action_type'] == 'calls':  # negative stack changes
+                    if player['last_action']['action_type'] == 'blind':
+                        if i['betting_cycle'] != player['last_action']['betting_cycle']:
+                            score_change = i['stack_change'] * -1
+                        else:
+                            score_change = (i['stack_change'] - int(player['last_action']['stack_change'])) * -1
+                    elif player['last_action']['action_type'] == 'calls':    # case 3
+                        # check if new betting round has began or its looped
+                        if i['betting_cycle'] == player['last_action']['betting_cycle']:
+                            score_change = (i['stack_change'] - int(player['last_action']['stack_change'])) * -1
+                        else:
+                            score_change = i['stack_change'] * -1
+                    elif player['last_action']['action_type'] == 'raises':
+                        if i['betting_cycle'] == player['last_action']['betting_cycle']:
+                            score_change = (i['stack_change'] - int(player['last_action']['stack_change'])) * -1
+                        else:
+                            score_change = i['stack_change'] * -1
+                    else:
+                        score_change = i['stack_change'] * -1
+
+                elif i['action_type'] == 'raises':
+                    if player['last_action']['action_type'] == 'blind':
+                        if i['betting_cycle'] != player['last_action']['betting_cycle']:
+                            score_change = i['stack_change'] * -1
+                        else:
+                            score_change = (i['stack_change'] - int(player['last_action']['stack_change'])) * -1
+                    elif player['last_action']['action_type'] == 'calls':    # case 3
+                        # check if new betting round has began or its looped
+                        if i['betting_cycle'] == player['last_action']['betting_cycle']:
+                            score_change = (i['stack_change'] - int(player['last_action']['stack_change'])) * -1
+                        else:
+                            score_change = i['stack_change'] * -1
+                    elif player['last_action']['action_type'] == 'raises':
+                        if i['betting_cycle'] == player['last_action']['betting_cycle']:
+                            score_change = (i['stack_change'] - int(player['last_action']['stack_change'])) * -1
+                        else:
+                            score_change = i['stack_change'] * -1
+                    else:
+                        score_change = i['stack_change'] * -1
+                elif i['action_type'] == 'blind':       # case 1
+                    score_change = i['stack_change'] * -1
+                player['score'] = player['score'] + score_change
+                print(player['score'], player['id'], i['action_type'], (player['last_action']['action_type']), i['betting_cycle'], player['last_action']['betting_cycle'])
+                player['last_action'] = i
+    return trackable_players
 
 
 def get_players():
     with open(SCORES_FILE, encoding='utf-8', mode='r') as f:
         players = []
         for i in f:
-            line.split(',')
-            newdict = dict(id=i[1], score=int(i[2][0]), identifier=i[0])
+            i = i.split(',')
+            # initialize betting cycles
+            newdict = dict(id=i[1], score=int(i[2]), identifier=i[0], games_won=int(i[3]), last_action=dict(action_type=None, betting_cycle=1))
             players.append(newdict)
     return players
 
