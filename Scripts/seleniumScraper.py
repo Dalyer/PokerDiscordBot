@@ -1,7 +1,7 @@
 from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 
-full_game_test_link = "https://www.pokernow.club/games/oDuvG8l90-TT1vi8cZOAIK7lh"  # "https://www.pokernow.club/games/oct_JAkdI3LIyZu-uBsuShMbm" #
+full_game_test_link = "https://www.pokernow.club/games/oct_JAkdI3LIyZu-uBsuShMbm"# "https://www.pokernow.club/games/oDuvG8l90-TT1vi8cZOAIK7lh"  #  #
 
 
 def start_poker_game():
@@ -45,6 +45,7 @@ def get_log_lines(link):
     log.reverse()       # reverse order so it is sequential
     game_data = []
     seq_num = -1
+    betting_cycle = 0
     for line in log:
         seq_num += 1
         action = line.split()
@@ -65,9 +66,10 @@ def get_log_lines(link):
             elif i == 'wins' or i == 'gained':
                 action_type = "win"
             elif i in ['turn:', 'flop:', 'river:', 'starting']:
+                betting_cycle += 1
                 action_type = 'round_end'
         if action_type != "":
-            newdict = dict(time=action[0], player=action[1][0], stack_change=int(value), action_type=action_type, seq_num=seq_num)
+            newdict = dict(time=action[0], player=action[1][0], stack_change=int(value), action_type=action_type, seq_num=seq_num, betting_cycle=betting_cycle)
         else:
             continue
         game_data.append(newdict)
@@ -80,17 +82,12 @@ def parse_game_log_test(link):
     log_lines = get_log_lines(link)
     print(log_lines)
     # trackable_players = get_players() here, add tests
-    player1 = dict(id='david', identifier='~', score=0, last_action=dict(action_type=None), betting_seq_num=1)
-    player2 = dict(id='TEST', identifier='#', score=0, last_action=dict(action_type=None), betting_seq_num=1)
+    player1 = dict(id='david', identifier='~', score=0, last_action=dict(action_type=None, betting_cycle=1))
+    player2 = dict(id='TEST', identifier='R', score=0, last_action=dict(action_type=None, betting_cycle=1))
     players_test = [player1, player2]
-    seq_last_cycle = 0
 
     for i in log_lines:
-        if i['action_type'] == 'round_end':     # check for end of betting cycle
-            seq_last_cycle = i['seq_num']
-
         for player in players_test:
-            player['betting_seq_num'] = seq_last_cycle
             if i['player'] == player['identifier']:
                 # determine valid player stack changes
                 if i['action_type'] == "win":      # positive stack changes
@@ -98,13 +95,13 @@ def parse_game_log_test(link):
 
                 elif i['action_type'] == 'calls':  # negative stack changes
                     if player['last_action']['action_type'] == 'blind':
-                        if player['betting_seq_num'] != seq_last_cycle:
+                        if i['betting_cycle'] != player['last_action']['betting_cycle']:
                             score_change = i['stack_change'] * -1
                         else:
                             score_change = (i['stack_change'] - int(player['last_action']['stack_change'])) * -1
                     elif player['last_action']['action_type'] == 'calls':    # case 3
                         # check if new betting round has began or its looped
-                        if player['betting_seq_num'] != seq_last_cycle:
+                        if i['betting_cycle'] == player['last_action']['betting_cycle']:
                             score_change = (i['stack_change'] - int(player['last_action']['stack_change'])) * -1
                         else:
                             score_change = i['stack_change'] * -1
@@ -115,13 +112,13 @@ def parse_game_log_test(link):
 
                 elif i['action_type'] == 'raises':
                     if player['last_action']['action_type'] == 'blind':
-                        if player['betting_seq_num'] != seq_last_cycle:
+                        if i['betting_cycle'] != player['last_action']['betting_cycle']:
                             score_change = i['stack_change'] * -1
                         else:
                             score_change = (i['stack_change'] - int(player['last_action']['stack_change'])) * -1
                     elif player['last_action']['action_type'] == 'calls':    # case 3
                         # check if new betting round has began or its looped
-                        if player['betting_seq_num'] != seq_last_cycle:
+                        if i['betting_cycle'] != player['last_action']['betting_cycle']:
                             score_change = (i['stack_change'] - int(player['last_action']['stack_change'])) * -1
                         else:
                             score_change = i['stack_change'] * -1
@@ -130,9 +127,8 @@ def parse_game_log_test(link):
                 else:       # case 1
                     score_change = i['stack_change'] * -1
                 player['score'] = player['score'] + score_change
-                print(player['score'], player['id'], i['action_type'], (player['last_action']['action_type']), player['betting_seq_num'], seq_last_cycle)
+                print(player['score'], player['id'], i['action_type'], (player['last_action']['action_type']), i['betting_cycle'], player['last_action']['betting_cycle'])
                 player['last_action'] = i
-                player['betting_seq_num'] = seq_last_cycle
 
 
 parse_game_log_test(full_game_test_link)
