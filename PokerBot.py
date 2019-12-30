@@ -72,7 +72,7 @@ async def hulk(ctx):
 
 
 @client.command(pass_context=True)
-async def add(ctx, player_iden, discord_name=None):
+async def add(ctx, player_iden=None, discord_name=None):
     # format in the text file (line start)PLAYER_IDENTIFIER,Discord_author,score,rounds won
     games_won = 0
     if discord_name is None:
@@ -86,7 +86,9 @@ async def add(ctx, player_iden, discord_name=None):
             entry = entry.split(',')
             used_identifiers.add(entry[0])
             used_discord_names.append(entry[1])
-        if player_iden in used_identifiers:
+        if player_iden is None:
+            await client.say(f"Please Include an identifier from{PLAYER_IDENTIFIERS - used_identifiers}")
+        elif player_iden in used_identifiers:
             await client.say(f"Identifier already in use. Choose from: {PLAYER_IDENTIFIERS - used_identifiers}")
         elif discord_name in used_discord_names:
             await client.say("Discord ID already in use.")
