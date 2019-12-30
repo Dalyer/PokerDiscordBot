@@ -116,7 +116,7 @@ async def end(ctx):
         log_lines = seleniumScraper.get_log_lines(CURRENT_GAME_LINK)
         new_scores = parse_game_log(log_lines)
         update_scores(new_scores)
-        await client.say(f"Poker game on: {CURRENT_GAME_LINK} over, scores recorded")
+        await client.say(f"Poker game over, scores recorded")
 
     else:
         await client.say("No poker game active. Use $start to generate a link.")
@@ -139,7 +139,7 @@ async def scores(ctx):
     leader_board = sorted(leader_board, key=lambda x: x['score'], reverse=True)
     print(leader_board)
     for i in leader_board:          # TODO add a proper table
-        temp = f"{i['id']} | Score = {i['score']} | Hands Won = {i['games_won']} | \n"
+        temp = f"{i['id']} | Score = {i['score']} | Hands Won = {i['games_won']}\n"
         response += temp
     await client.say(response)
 
