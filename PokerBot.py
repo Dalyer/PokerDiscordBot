@@ -41,7 +41,7 @@ async def ping(ctx):
 # logout command
 @client.command(pass_context=True)
 async def logout(ctx):
-    if ctx.message.author == 'Dalyer#5373':
+    if str(ctx.message.author) == 'Dalyer#5373':
         print("Bot going offline")
         await client.logout()
 
