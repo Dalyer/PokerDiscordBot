@@ -222,8 +222,11 @@ def get_players():
     return players
 
 
-def update_scores():
-    pass
+def update_scores(new_scores):
+    with open(SCORES_FILE, encoding='utf-8', mode='r+') as f:
+        f.truncate()
+        for player in new_scores:
+            f.write(f"{player['identifier']},{player['id']},{player['score']},{player['games_won']}")
 
 
 client.run(TOKEN)
