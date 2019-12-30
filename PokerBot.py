@@ -49,8 +49,8 @@ async def logout(ctx):
 async def commands(ctx):
     # UPDATE THIS LIST
     await client.say(
-        f"Poker related commands:\n{bot_prefix}start: [no arguments]Generates a new poker game and returns a link\n"
-        f"{bot_prefix}end: [no arguments]Updates leader boards and stops tracking the las tgame\n"
+        f"Poker related commands:\n{bot_prefix}start: [no arguments]Starts a new poker game and returns a link\n"
+        f"{bot_prefix}end: [no arguments]Updates leader boards and stops tracking the last game\n"
         f"{bot_prefix}Display the leader board\n{bot_prefix}get_score[player / player_identifier]"
         f"(noargs = poster's score): More specific individual player stats\n"
         f"{bot_prefix}add[player_name][discord_id][player_identifier]"
