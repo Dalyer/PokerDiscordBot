@@ -112,6 +112,9 @@ async def start(ctx):
 async def end(ctx):
     global CURRENT_GAME_LINK
     if CURRENT_GAME_LINK is not None:
+        log_lines = seleniumScraper.get_log_lines(CURRENT_GAME_LINK)
+        new_scores = parse_game_log(log_lines)
+        update_scores(new_scores)
         await client.say(f"Poker game on: {CURRENT_GAME_LINK} over, scores recorded")
 
     else:
