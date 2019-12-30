@@ -159,7 +159,8 @@ async def how(ctx):
                      f"2. Use the {bot_prefix}start command to start a poker game, use the link provided\n"
                      f"3. In order to have your score properly tracked you NEED to include your chosen PLAYER"
                      f" IDENTIFIER at the beginning of your in-game name\n"
-                     f"4. Once you want to stop tracking the game use the {bot_prefix}end command")
+                     f"4. Type $startgame in the poker chat once you are ready\n"
+                     f"5. Once you want to stop tracking the game use the {bot_prefix}end command")
 
 
 @client.command(pass_context=True)
