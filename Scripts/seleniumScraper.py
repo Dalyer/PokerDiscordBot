@@ -82,10 +82,10 @@ def parse_game_log_test(link):
     log_lines = get_log_lines(link)
     print(log_lines)
     # trackable_players = get_players() here, add tests
-    player1 = dict(id='david', identifier='~', score=0, last_action=dict(action_type=None, betting_cycle=1))
-    player2 = dict(id='TEST', identifier='#', score=0, last_action=dict(action_type=None, betting_cycle=1))
-    player3 = dict(id='DALYER', identifier='^', score=0, last_action=dict(action_type=None, betting_cycle=1))
-    players_test = [player1, player2]
+    player1 = dict(id='david', identifier='~', score=0, last_action=dict(action_type=None, betting_cycle=1, games_won=0))
+    player2 = dict(id='TEST', identifier='#', score=0, last_action=dict(action_type=None, betting_cycle=1, games_won=0))
+    player3 = dict(id='DALYER', identifier='^', score=0, last_action=dict(action_type=None, betting_cycle=1, games_won=0))
+    players_test = [player1, player2, player3]
 
     for i in log_lines:
         for player in players_test:
@@ -93,6 +93,7 @@ def parse_game_log_test(link):
                 # determine valid player stack changes
                 if i['action_type'] == "win":      # positive stack changes
                     score_change = i['stack_change']
+                    player['games_won'] += 1
 
                 elif i['action_type'] == 'calls':  # negative stack changes
                     if player['last_action']['action_type'] == 'blind':
