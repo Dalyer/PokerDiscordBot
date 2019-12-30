@@ -48,15 +48,33 @@ def accept_seat_requests(driver):
     driver.find_element_by_css_selector('div:nth-child(1) div:nth-child(1) div.main-container '
                                         'div.config-top-tabs > button.config-top-tab-buttton.back:nth-child(1)').click()
 
+    # check for $startgame in the chat log
+    last_start_message = None
+    for i in range(1, 5):
+        try:
+            message = driver.find_element_by_css_selector(f'div.main-container.two-color div.controls'
+                                                          f' div.chat-and-log-ctn div.chat '
+                                                          f'div.chat-container div.messages > p:nth-child({i})')
+            message = message.text.split()
+            if message[3] == '$startgame' and message[1] != last_start_message:
+                driver.find_element_by_css_selector('div:nth-child(1) div.main-container.two-color div.controls '
+                                                    'div.action-buttons.right-controls > button.button-1.green').click()
+                last_start_message = message[1]
+            print(message.text.split())
+        except selenium.common.exceptions.NoSuchElementException:
+            pass
 
+
+#div.main-container.two-color div.controls div.chat-and-log-ctn div.chat div.chat-container div.messages p:nth-child(2) > span.highlight
 def get_log_lines(link):
     driver = webdriver.Firefox()
     driver.get(link)
-
+    time.sleep(0.25)
     log_button = driver.find_element_by_css_selector('div:nth-child(1) div.main-container.two-color div.controls '
                                                      'div.chat-and-log-ctn > '
                                                      'button.button-1.show-log-button.small-button.dark-gray')
     popup_close = driver.find_element_by_class_name('modal-button-close')
+    time.sleep(0.25)
     popup_close.click()
     log_button.click()
 
