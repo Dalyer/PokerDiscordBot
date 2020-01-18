@@ -167,8 +167,8 @@ async def how(ctx):
 
 @client.command(pass_context=True)
 async def errors(ctx):
-    await client.say("This hasn't been tested properly so I wouldn't be surprised if there is some weird behaviour"
-                     "just send me a DM with any errors at Dalyer#5373")
+    await client.say("This hasn't been tested properly so I wouldn't be surprised if there is some weird behaviour, also if the poker now website decides to change stuff it will break."
+                     "Just send me a DM with any errors at Dalyer#5373 or submit and issue at https://github.com/Dalyer/PokerDiscordBot")
 
 
 # #######EVENTS########
