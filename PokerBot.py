@@ -269,10 +269,10 @@ def update_scores(new_scores):
             f.write(f"{player['identifier']},{player['id']},{player['score']},{player['games_won']}\n")
 
                     
-def log(message, context=None, log_type="LOG"):
+def log(message, context=None):
     time_stamp = time.localtime()
     if context is None:
-        message = time_stamp.tm_year + "-" + time_stamp.tm_month + "-" + time_stamp.tm_day + "  " + time_stamp.tm_hour ":" + time_stamp.tm_min + ":" + time_stamp.tm_sec + " [" + log_type + "] " + message + "\n"
+        message = time_stamp.tm_year + "-" + time_stamp.tm_month + "-" + time_stamp.tm_day + "  " + time_stamp.tm_hour ":" + time_stamp.tm_min + ":" + time_stamp.tm_sec + "  " + message + "\n"
     else: 
         message = time_stamp.tm_year + "-" + time_stamp.tm_month + "-" + time_stamp.tm_day + "  " + time_stamp.tm_hour ":" + time_stamp.tm_min + ":" + time_stamp.tm_sec + " [" + log_type + "] " + "by " + context.message.author + ":" + message + "\n"        
     with open(LOG_FILE, encoding='utf-8', mode='r+') as f:
