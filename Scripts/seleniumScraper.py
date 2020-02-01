@@ -5,11 +5,14 @@ import selenium
 
 full_game_test_link = "https://www.pokernow.club/games/oDuvG8l90-TT1vi8cZOAIK7lh"  #  # "https://www.pokernow.club/games/oct_JAkdI3LIyZu-uBsuShMbm"
 
-
-def start_poker_game():
+# setup firefox webdriver, call on bot start
+def start_webdriver():
     options = Options()
     options.headless = True
     driver = webdriver.Firefox(options=options)
+    return driver
+
+def start_poker_game(driver):
     driver.get("https://www.pokernow.club")
     useless_name = driver.find_element_by_css_selector('#player-name')
     useless_name.clear()
@@ -68,10 +71,7 @@ def accept_seat_requests(driver):
 
 
 #div.main-container.two-color div.controls div.chat-and-log-ctn div.chat div.chat-container div.messages p:nth-child(2) > span.highlight
-def get_log_lines(link):
-    options = Options()
-    options.headless = True
-    driver = webdriver.Firefox(options=options)
+def get_log_lines(link, driver):
     driver.get(link)
     time.sleep(0.25)
     log_button = driver.find_element_by_css_selector('div:nth-child(1) div.main-container.two-color div.controls '
