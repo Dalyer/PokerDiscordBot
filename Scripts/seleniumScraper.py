@@ -31,7 +31,7 @@ def start_poker_game(driver):
     driver.find_element_by_css_selector('div.alert-1-container div.alert-1 '
                                         'div.alert-1-buttons span:nth-child(1) > '
                                         'button.button-1.gray:nth-child(1)').click()
-    return link, driver
+    return link
 
 
 def accept_seat_requests(driver):
