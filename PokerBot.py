@@ -37,6 +37,7 @@ client = commands.Bot(command_prefix=bot_prefix)
 # ping command
 @client.command(pass_context=True)
 async def ping(ctx):
+    log("COMMAND: ping", ctx)
     await client.say("Pong!")
 
 
@@ -44,7 +45,7 @@ async def ping(ctx):
 @client.command(pass_context=True)
 async def logout(ctx):
     if str(ctx.message.author) == 'Dalyer#5373':
-        print("Bot going offline")
+        log("Bot logging off", ctx)
         GAME_DRIVER.quit()     # close firefox-esr sessions
         await client.logout()
 
@@ -52,6 +53,7 @@ async def logout(ctx):
 # list all commands command
 @client.command(pass_context=True)
 async def commands(ctx):
+    log("Commands command", ctx)
     # UPDATE THIS LIST
     await client.say(
         f"Poker related commands:\n{bot_prefix}start: [no arguments]Starts a new poker game and returns a link\n"
@@ -66,16 +68,19 @@ async def commands(ctx):
 # placeholder for the let it go meme
 @client.command(pass_context=True)
 async def let_go(ctx):
+    log("DEAD MEME", ctx)
     await client.say("https://i.imgur.com/vKcJOHu.jpg")
 
 
 @client.command(pass_context=True)
 async def hulk(ctx):
+    log("REST IN PEACE", ctx)
     await client.say("Hulk would have killed everybody :BibleThump:")
 
 
 @client.command(pass_context=True)
 async def add(ctx, player_iden=None, discord_name=None):
+    log("add command", ctx)
     # format in the text file (line start)PLAYER_IDENTIFIER,Discord_author,score,rounds won
     games_won = 0
     if discord_name is None:
@@ -99,19 +104,24 @@ async def add(ctx, player_iden=None, discord_name=None):
             await client.say(f"Added {discord_name} with identifier "
                              f"{player_iden} to the leader board with a score of {starting_score}")
             f.write(f"{player_iden},{discord_name},{starting_score}\n")
+            log("Player added to the leaderboard", ctx)
         elif player_iden[0] not in PLAYER_IDENTIFIERS:
             await client.say(f"Please use a valid player identifier from {PLAYER_IDENTIFIERS}")
         elif discord_name is not None:
             await client.say(f"Added {discord_name} with identifier "
                              f"{player_iden} to the leader board with a score of {starting_score}")
             f.write(f"{player_iden},{discord_name},{starting_score},{games_won}\n")
+            log_message = "Player added to the leader" + discord_name
+            log(log_message, ctx)
 
 
 # Info Poker Start Command
 @client.command(pass_context=True)
 async def start(ctx):           # TODO major error, can't approve new seats with out the original window
     global CURRENT_GAME_LINK, GAME_DRIVER
+    log("Generating new poker game", ctx)
     CURRENT_GAME_LINK = seleniumScraper.start_poker_game() # this has significant delay
+    log("Poker Link generated")
     await client.say(f"Starting poker game at: {CURRENT_GAME_LINK}")
 
     # add new players to the game
@@ -125,21 +135,21 @@ async def start(ctx):           # TODO major error, can't approve new seats with
 async def end(ctx):
     global CURRENT_GAME_LINK, GAME_DRIVER
     if CURRENT_GAME_LINK is not None:
+        log("end command", ctx)
         log_lines = seleniumScraper.get_log_lines(CURRENT_GAME_LINK, GAME_DRIVER)
         new_scores = parse_game_log(log_lines)
         update_scores(new_scores)
-        GAME_DRIVER.close()
         await client.say(f"Poker game over, scores recorded")
     else:
         await client.say("No poker game active. Use $start to generate a link.")
 
     CURRENT_GAME_LINK = None
-    GAME_DRIVER = None
 
 
 # Poker scores
 @client.command(pass_context=True)
 async def scores(ctx):
+    log("scores command", ctx)
     response = f"Current leader board:\n"
     with open(SCORES_FILE, encoding='utf-8', mode='r') as f:
         leader_board = []
@@ -159,6 +169,7 @@ async def scores(ctx):
 
 @client.command(pass_context=True)
 async def how(ctx):
+    log("how command", ctx)
     await client.say(f"How to get started\n"
                      f"1. Make sure to add yourself to the leader board using the{bot_prefix}add command\n"
                      f"2. Use the {bot_prefix}start command to start a poker game, use the link provided\n"
@@ -170,6 +181,7 @@ async def how(ctx):
 
 @client.command(pass_context=True)
 async def errors(ctx):
+    log("errors command", ctx)
     await client.say("This hasn't been tested properly so I wouldn't be surprised if there is some weird behaviour, also if the poker now website decides to change stuff it will break."
                      "Just send me a DM with any errors at Dalyer#5373 or submit and issue at https://github.com/Dalyer/PokerDiscordBot")
 
@@ -179,18 +191,18 @@ async def errors(ctx):
 # Called when the bot connects to the server
 @client.event
 async def on_ready():
-    print("Bot Online!")
-    print("Name: {}".format(client.user.name))
-    print("ID: {}".format(client.user.id))
+    start_message = "Bot Online!" + "Name: {}".format(client.user.name) + "ID: {}".format(client.user.id)
+    log(start_message)
     global GAME_DRIVER
     GAME_DRIVER = seleniumScraper.start_webdriver()
-    print("Starting webdriver")
-    print("Live")
+    log("Starting Webdriver")
+    log("Bot Live")
     await client.change_presence(game=discord.Game(name='type $commands'))
 
 
 # #######POKER GAME FUNCTIONS######### #
 def parse_game_log(log_lines):
+    log("Parsing game logs")
     trackable_players = get_players()
 
     for i in log_lines:
@@ -251,6 +263,7 @@ def parse_game_log(log_lines):
 
 
 def get_players():
+    log("Retrieving leader board players")
     with open(SCORES_FILE, encoding='utf-8', mode='r') as f:
         players = []
         for i in f:
@@ -263,6 +276,7 @@ def get_players():
 
 
 def update_scores(new_scores):
+    log("Updating scores")
     with open(SCORES_FILE, encoding='utf-8', mode='r+') as f:
         f.truncate()
         for player in new_scores:
@@ -278,5 +292,6 @@ def log(message, context=None):
     with open(LOG_FILE, encoding='utf-8', mode='r+') as f:
         f.write(message)
     print(message)
+         
                     
 client.run(TOKEN)
