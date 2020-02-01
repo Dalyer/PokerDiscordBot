@@ -120,7 +120,6 @@ def get_log_lines(link, driver):
             continue
         game_data.append(newdict)
 
-    driver.close()
     return game_data
 
 
