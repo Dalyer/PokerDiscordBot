@@ -43,6 +43,7 @@ async def ping(ctx):
 async def logout(ctx):
     if str(ctx.message.author) == 'Dalyer#5373':
         print("Bot going offline")
+        GAME_DRIVER.quit()     # close firefox-esr sessions
         await client.logout()
 
 
@@ -108,7 +109,7 @@ async def add(ctx, player_iden=None, discord_name=None):
 @client.command(pass_context=True)
 async def start(ctx):           # TODO major error, can't approve new seats with out the original window
     global CURRENT_GAME_LINK, GAME_DRIVER
-    [CURRENT_GAME_LINK, GAME_DRIVER] = seleniumScraper.start_poker_game() # this has significant delay
+    CURRENT_GAME_LINK = seleniumScraper.start_poker_game() # this has significant delay
     await client.say(f"Starting poker game at: {CURRENT_GAME_LINK}")
 
     # add new players to the game
@@ -122,7 +123,7 @@ async def start(ctx):           # TODO major error, can't approve new seats with
 async def end(ctx):
     global CURRENT_GAME_LINK, GAME_DRIVER
     if CURRENT_GAME_LINK is not None:
-        log_lines = seleniumScraper.get_log_lines(CURRENT_GAME_LINK)
+        log_lines = seleniumScraper.get_log_lines(CURRENT_GAME_LINK, GAME_DRIVER)
         new_scores = parse_game_log(log_lines)
         update_scores(new_scores)
         GAME_DRIVER.close()
@@ -179,6 +180,10 @@ async def on_ready():
     print("Bot Online!")
     print("Name: {}".format(client.user.name))
     print("ID: {}".format(client.user.id))
+    global GAME_DRIVER
+    GAME_DRIVER = seleniumScraper.start_webdriver()
+    print("Starting webdriver")
+    print("Live")
     await client.change_presence(game=discord.Game(name='type $commands'))
 
 
