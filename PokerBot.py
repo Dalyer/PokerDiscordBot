@@ -1,6 +1,8 @@
 # PokerBot.py
 
 import os
+import time
+import datetime
 import asyncio
 import discord
 from discord.ext import commands
@@ -14,6 +16,7 @@ TOKEN = ""
 dirName = os.getcwd()
 CONFIG_FILE = os.path.join(dirName, 'config.txt')
 SCORES_FILE = os.path.join(dirName, 'scores.txt')
+LOG_FILE = os.path.join(dirName, 'logs.txt')
 
 config = open(CONFIG_FILE, encoding='utf-8', mode='r')
 
@@ -266,5 +269,12 @@ def update_scores(new_scores):
         for player in new_scores:
             f.write(f"{player['identifier']},{player['id']},{player['score']},{player['games_won']}\n")
 
-
+                    
+def log(message):
+    time_stamp = time.localtime()
+    message = time_stamp.tm_year + "-" + time_stamp.tm_month + "-" + time_stamp.tm_day + "  " + time_stamp.tm_hour ":" + time_stamp.tm_min + ":" + time_stamp.tm_sec + "   " + message + "\n"
+    with open(LOG_FILE, encoding='utf-8', mode='r+') as f:
+        f.write(message)
+    print(message)
+                    
 client.run(TOKEN)
