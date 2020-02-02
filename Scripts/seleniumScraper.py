@@ -33,10 +33,13 @@ def start_poker_game(driver):
     driver.find_element_by_css_selector('div.alert-1-container div.alert-1 '
                                         'div.alert-1-buttons span:nth-child(1) > '
                                         'button.button-1.gray:nth-child(1)').click()
-    return link
+    last_start_message = None
+    return link, last_start_message
 
 
-def accept_seat_requests(driver):
+def accept_seat_requests(driver, last_start_message):
+    # setup log messages
+    log_messages = []
     # driver.find_element_by_class_name('modal-button-close').click()
     driver.find_element_by_css_selector('div:nth-child(1) div:nth-child(1) div.main-container.two-color '
                                         'div.top-buttons > button.top-buttons-button.options').click()
@@ -51,13 +54,14 @@ def accept_seat_requests(driver):
                                                 'form.form-1 > button.button-1').click()
             driver.find_element_by_css_selector('div:nth-child(1) div.alert-1-container div.alert-1 '
                                                 'div.alert-1-buttons > span:nth-child(1)').click()
+            log_messages.append("Player added to the poker table")
         except selenium.common.exceptions.NoSuchElementException:
+            # log_messages.append("NoSuchElementException in accept_seat_requests")
             pass
     driver.find_element_by_css_selector('div:nth-child(1) div:nth-child(1) div.main-container '
                                         'div.config-top-tabs > button.config-top-tab-buttton.back:nth-child(1)').click()
 
     # check for $startgame in the chat log
-    last_start_message = None
     for i in range(1, 5):
         try:
             message = driver.find_element_by_css_selector(f'div.main-container.two-color div.controls'
@@ -68,9 +72,12 @@ def accept_seat_requests(driver):
                 driver.find_element_by_css_selector('div:nth-child(1) div.main-container.two-color div.controls '
                                                     'div.action-buttons.right-controls > button.button-1.green').click()
                 last_start_message = message[1]
+                log_messages.append("In-game start request accepted")
         except selenium.common.exceptions.NoSuchElementException \
                 or selenium.common.exceptions.StaleElementReferenceException:
+            # log_messages.append("NoSuchElementException or StaleElementReferenceException in accept_seat_requests")
             pass
+    return log_messages, last_start_message
 
 
 #div.main-container.two-color div.controls div.chat-and-log-ctn div.chat div.chat-container div.messages p:nth-child(2) > span.highlight
@@ -80,9 +87,9 @@ def get_log_lines(link, driver):
     log_button = driver.find_element_by_css_selector('div:nth-child(1) div.main-container.two-color div.controls '
                                                      'div.chat-and-log-ctn > '
                                                      'button.button-1.show-log-button.small-button.dark-gray')
-    popup_close = driver.find_element_by_class_name('modal-button-close')
+    # popup_close = driver.find_element_by_class_name('modal-button-close')
     time.sleep(0.25)
-    popup_close.click()
+    # popup_close.click()
     log_button.click()
 
     game_log = driver.find_elements_by_css_selector("div:nth-child(1) div:nth-child(1) "
@@ -126,8 +133,8 @@ def get_log_lines(link, driver):
     return game_data
 
 
-def parse_game_log_test(link):
-    log_lines = get_log_lines(link)
+def parse_game_log_test(link, driver):
+    log_lines = get_log_lines(link, driver)
     print(log_lines)
     # trackable_players = get_players() here, add tests
     player1 = dict(id='david', identifier='~', score=0, last_action=dict(action_type=None, betting_cycle=1), games_won=0)
