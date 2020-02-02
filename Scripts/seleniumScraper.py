@@ -5,12 +5,14 @@ import selenium
 
 full_game_test_link = "https://www.pokernow.club/games/oDuvG8l90-TT1vi8cZOAIK7lh"  #  # "https://www.pokernow.club/games/oct_JAkdI3LIyZu-uBsuShMbm"
 
+
 # setup firefox webdriver, call on bot start
 def start_webdriver():
     options = Options()
     options.headless = True
     driver = webdriver.Firefox(options=options)
     return driver
+
 
 def start_poker_game(driver):
     driver.get("https://www.pokernow.club")
@@ -66,7 +68,8 @@ def accept_seat_requests(driver):
                 driver.find_element_by_css_selector('div:nth-child(1) div.main-container.two-color div.controls '
                                                     'div.action-buttons.right-controls > button.button-1.green').click()
                 last_start_message = message[1]
-        except selenium.common.exceptions.NoSuchElementException:
+        except selenium.common.exceptions.NoSuchElementException \
+                or selenium.common.exceptions.StaleElementReferenceException:
             pass
 
 
