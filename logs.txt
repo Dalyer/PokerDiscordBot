@@ -1,1 +1,21 @@
 
+2020-2-1  17:24:25  Bot Online!Name: PokerBotID: 654538919257440296
+2020-2-1  17:24:27  Starting Webdriver
+2020-2-1  17:24:27  Bot Live
+2020-2-1  17:24:36  by Dalyer#5373:COMMAND: ping
+2020-2-1  17:24:41  by Dalyer#5373:Generating new poker game
+2020-2-1  17:25:26  by Dalyer#5373:Bot logging off
+2020-2-1  17:25:31  Bot Online!Name: PokerBotID: 654538919257440296
+2020-2-1  17:25:34  Starting Webdriver
+2020-2-1  17:25:34  Bot Live
+2020-2-1  17:25:36  by Dalyer#5373:Commands command
+2020-2-1  17:25:39  by Dalyer#5373:how command
+2020-2-1  17:25:41  by Dalyer#5373:scores command
+2020-2-1  17:25:45  by Dalyer#5373:add command
+2020-2-1  17:25:54  by Dalyer#5373:Commands command
+2020-2-1  17:26:2  by Dalyer#5373:errors command
+2020-2-1  17:26:5  by Dalyer#5373:Generating new poker game
+2020-2-1  17:26:7  Poker Link generated
+2020-2-1  17:26:57  by Dalyer#5373:COMMAND: ping
+2020-2-1  17:29:41  by Dalyer#5373:end command
+2020-2-1  17:31:8  by Dalyer#5373:Bot logging off

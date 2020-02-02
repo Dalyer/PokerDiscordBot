@@ -47,7 +47,7 @@ async def logout(ctx):
     if str(ctx.message.author) == 'Dalyer#5373':
         log("Bot logging off", ctx)
         GAME_DRIVER.quit()     # close firefox-esr sessions
-        await client.logout()
+        await client.close()
 
 
 # list all commands command
@@ -120,7 +120,7 @@ async def add(ctx, player_iden=None, discord_name=None):
 async def start(ctx):           # TODO major error, can't approve new seats with out the original window
     global CURRENT_GAME_LINK, GAME_DRIVER
     log("Generating new poker game", ctx)
-    CURRENT_GAME_LINK = seleniumScraper.start_poker_game() # this has significant delay
+    CURRENT_GAME_LINK = seleniumScraper.start_poker_game(GAME_DRIVER)   # this has significant delay
     log("Poker Link generated")
     await client.say(f"Starting poker game at: {CURRENT_GAME_LINK}")
 
@@ -286,12 +286,15 @@ def update_scores(new_scores):
 def log(message, context=None):
     time_stamp = time.localtime()
     if context is None:
-        message = time_stamp.tm_year + "-" + time_stamp.tm_month + "-" + time_stamp.tm_day + "  " + time_stamp.tm_hour ":" + time_stamp.tm_min + ":" + time_stamp.tm_sec + "  " + message + "\n"
+        log_message = str(time_stamp.tm_year) + "-" + str(time_stamp.tm_mon) + "-" + str(time_stamp.tm_mday) + "  " \
+         + str(time_stamp.tm_hour) + ":" + str(time_stamp.tm_min) + ":" + str(time_stamp.tm_sec) + "  " + message
     else: 
-        message = time_stamp.tm_year + "-" + time_stamp.tm_month + "-" + time_stamp.tm_day + "  " + time_stamp.tm_hour ":" + time_stamp.tm_min + ":" + time_stamp.tm_sec + " [" + log_type + "] " + "by " + context.message.author + ":" + message + "\n"        
-    with open(LOG_FILE, encoding='utf-8', mode='r+') as f:
-        f.write(message)
-    print(message)
-         
-                    
+        log_message = str(time_stamp.tm_year) + "-" + str(time_stamp.tm_mon) + "-" + str(time_stamp.tm_mday) + "  " \
+         + str(time_stamp.tm_hour) + ":" + str(time_stamp.tm_min) + ":" + str(time_stamp.tm_sec) + "  " \
+         + "by " + str(context.message.author) + ":" + message
+    with open(LOG_FILE, encoding='utf-8', mode='a') as f:
+        f.writelines(log_message + "\n")
+    print(log_message)
+
+
 client.run(TOKEN)
