@@ -71,7 +71,7 @@ def accept_seat_requests(driver, last_start_message):
             if message[3] == '$startgame' and message[1] != last_start_message:
                 driver.find_element_by_css_selector('div:nth-child(1) div.main-container.two-color div.controls '
                                                     'div.action-buttons.right-controls > button.button-1.green').click()
-                last_start_message = message[1]
+                #last_start_message = message[1]
                 log_messages.append("In-game start request accepted")
         except selenium.common.exceptions.NoSuchElementException \
                 or selenium.common.exceptions.StaleElementReferenceException:
