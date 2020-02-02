@@ -120,14 +120,16 @@ async def add(ctx, player_iden=None, discord_name=None):
 async def start(ctx):           # TODO major error, can't approve new seats with out the original window
     global CURRENT_GAME_LINK, GAME_DRIVER
     log("Generating new poker game", ctx)
-    CURRENT_GAME_LINK = seleniumScraper.start_poker_game(GAME_DRIVER)   # this has significant delay
+    CURRENT_GAME_LINK, last_game_message = seleniumScraper.start_poker_game(GAME_DRIVER)   # this has significant delay
     log("Poker Link generated")
     await client.say(f"Starting poker game at: {CURRENT_GAME_LINK}")
 
     # add new players to the game
     while CURRENT_GAME_LINK is not None:
         await asyncio.sleep(5)
-        seleniumScraper.accept_seat_requests(GAME_DRIVER)
+        log_messages, last_game_message = seleniumScraper.accept_seat_requests(GAME_DRIVER, last_game_message)
+        for i in log_messages:
+            log(i)
 
 
 # Poker End Command

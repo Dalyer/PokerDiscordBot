@@ -19,3 +19,686 @@
 2020-2-1  17:26:57  by Dalyer#5373:COMMAND: ping
 2020-2-1  17:29:41  by Dalyer#5373:end command
 2020-2-1  17:31:8  by Dalyer#5373:Bot logging off
+2020-2-1  17:32:33  Bot Online!Name: PokerBotID: 654538919257440296
+2020-2-1  17:32:36  Starting Webdriver
+2020-2-1  17:32:36  Bot Live
+2020-2-1  17:32:36  by Dalyer#5373:COMMAND: ping
+2020-2-1  17:32:37  by Dalyer#5373:Generating new poker game
+2020-2-1  17:32:40  Poker Link generated
+2020-2-1  17:34:25  by Dalyer#5373:Bot logging off
+2020-2-1  17:45:2  Bot Online!Name: PokerBotID: 654538919257440296
+2020-2-1  17:45:53  by Dalyer#5373:COMMAND: ping
+2020-2-1  17:46:32  by Dalyer#5373:COMMAND: ping
+2020-2-1  17:46:36  by Dalyer#5373:Generating new poker game
+2020-2-1  17:47:4  by Dalyer#5373:Bot logging off
+2020-2-1  17:48:55  by Dalyer#5373:Bot logging off
+2020-2-1  17:49:29  Bot Online!Name: PokerBotID: 654538919257440296
+2020-2-1  17:49:32  Starting Webdriver
+2020-2-1  17:49:32  Bot Live
+2020-2-1  17:49:37  by Dalyer#5373:COMMAND: ping
+2020-2-1  17:49:41  by Dalyer#5373:Generating new poker game
+2020-2-1  17:49:44  Poker Link generated
+2020-2-1  17:50:19  by Dalyer#5373:Bot logging off
+2020-2-1  17:51:55  Bot Online!Name: PokerBotID: 654538919257440296
+2020-2-1  17:55:10  by Dalyer#5373:COMMAND: ping
+2020-2-1  17:55:13  by Dalyer#5373:Generating new poker game
+2020-2-1  17:55:41  by Dalyer#5373:Bot logging off
+2020-2-1  18:1:12  by Dalyer#5373:COMMAND: ping
+2020-2-1  18:1:34  by Dalyer#5373:Bot logging off
+2020-2-1  18:5:42  Bot Online!Name: PokerBotID: 654538919257440296
+2020-2-1  18:5:45  Starting Webdriver
+2020-2-1  18:5:45  Bot Live
+2020-2-1  18:5:49  by Dalyer#5373:COMMAND: ping
+2020-2-1  18:5:51  by Dalyer#5373:Generating new poker game
+2020-2-1  18:5:54  Poker Link generated
+2020-2-1  18:6:0  NoSuchElementException in accept_seat_requests
+2020-2-1  18:6:0  Player added to the poker table
+2020-2-1  18:6:0  NoSuchElementException in accept_seat_requests
+2020-2-1  18:6:0  NoSuchElementException in accept_seat_requests
+2020-2-1  18:6:0  NoSuchElementException in accept_seat_requests
+2020-2-1  18:6:0  NoSuchElementException in accept_seat_requests
+2020-2-1  18:6:0  NoSuchElementException in accept_seat_requests
+2020-2-1  18:6:0  NoSuchElementException in accept_seat_requests
+2020-2-1  18:6:0  NoSuchElementException in accept_seat_requests
+2020-2-1  18:6:0  NoSuchElementException or StaleElementReferenceException in accept_seat_requests
+2020-2-1  18:6:0  NoSuchElementException or StaleElementReferenceException in accept_seat_requests
+2020-2-1  18:6:0  NoSuchElementException or StaleElementReferenceException in accept_seat_requests
+2020-2-1  18:6:6  NoSuchElementException in accept_seat_requests
+2020-2-1  18:6:6  NoSuchElementException in accept_seat_requests
+2020-2-1  18:6:6  NoSuchElementException in accept_seat_requests
+2020-2-1  18:6:6  NoSuchElementException in accept_seat_requests
+2020-2-1  18:6:6  NoSuchElementException in accept_seat_requests
+2020-2-1  18:6:6  NoSuchElementException in accept_seat_requests
+2020-2-1  18:6:6  NoSuchElementException in accept_seat_requests
+2020-2-1  18:6:6  NoSuchElementException in accept_seat_requests
+2020-2-1  18:6:6  NoSuchElementException in accept_seat_requests
+2020-2-1  18:6:6  NoSuchElementException or StaleElementReferenceException in accept_seat_requests
+2020-2-1  18:6:6  NoSuchElementException or StaleElementReferenceException in accept_seat_requests
+2020-2-1  18:6:6  NoSuchElementException or StaleElementReferenceException in accept_seat_requests
+2020-2-1  18:6:11  NoSuchElementException in accept_seat_requests
+2020-2-1  18:6:11  NoSuchElementException in accept_seat_requests
+2020-2-1  18:6:11  NoSuchElementException in accept_seat_requests
+2020-2-1  18:6:11  NoSuchElementException in accept_seat_requests
+2020-2-1  18:6:11  NoSuchElementException in accept_seat_requests
+2020-2-1  18:6:11  NoSuchElementException in accept_seat_requests
+2020-2-1  18:6:11  NoSuchElementException in accept_seat_requests
+2020-2-1  18:6:11  NoSuchElementException in accept_seat_requests
+2020-2-1  18:6:11  NoSuchElementException in accept_seat_requests
+2020-2-1  18:6:11  NoSuchElementException or StaleElementReferenceException in accept_seat_requests
+2020-2-1  18:6:11  NoSuchElementException or StaleElementReferenceException in accept_seat_requests
+2020-2-1  18:6:11  NoSuchElementException or StaleElementReferenceException in accept_seat_requests
+2020-2-1  18:6:17  NoSuchElementException in accept_seat_requests
+2020-2-1  18:6:17  NoSuchElementException in accept_seat_requests
+2020-2-1  18:6:17  Player added to the poker table
+2020-2-1  18:6:17  NoSuchElementException in accept_seat_requests
+2020-2-1  18:6:17  NoSuchElementException in accept_seat_requests
+2020-2-1  18:6:17  NoSuchElementException in accept_seat_requests
+2020-2-1  18:6:17  NoSuchElementException in accept_seat_requests
+2020-2-1  18:6:17  NoSuchElementException in accept_seat_requests
+2020-2-1  18:6:17  NoSuchElementException in accept_seat_requests
+2020-2-1  18:6:17  NoSuchElementException or StaleElementReferenceException in accept_seat_requests
+2020-2-1  18:6:17  NoSuchElementException or StaleElementReferenceException in accept_seat_requests
+2020-2-1  18:6:17  NoSuchElementException or StaleElementReferenceException in accept_seat_requests
+2020-2-1  18:6:23  NoSuchElementException in accept_seat_requests
+2020-2-1  18:6:23  NoSuchElementException in accept_seat_requests
+2020-2-1  18:6:23  NoSuchElementException in accept_seat_requests
+2020-2-1  18:6:23  NoSuchElementException in accept_seat_requests
+2020-2-1  18:6:23  NoSuchElementException in accept_seat_requests
+2020-2-1  18:6:23  NoSuchElementException in accept_seat_requests
+2020-2-1  18:6:23  NoSuchElementException in accept_seat_requests
+2020-2-1  18:6:23  NoSuchElementException in accept_seat_requests
+2020-2-1  18:6:23  NoSuchElementException in accept_seat_requests
+2020-2-1  18:6:23  In-game start request accepted
+2020-2-1  18:6:23  NoSuchElementException or StaleElementReferenceException in accept_seat_requests
+2020-2-1  18:6:23  NoSuchElementException or StaleElementReferenceException in accept_seat_requests
+2020-2-1  18:6:23  NoSuchElementException or StaleElementReferenceException in accept_seat_requests
+2020-2-1  18:6:29  NoSuchElementException in accept_seat_requests
+2020-2-1  18:6:29  NoSuchElementException in accept_seat_requests
+2020-2-1  18:6:29  NoSuchElementException in accept_seat_requests
+2020-2-1  18:6:29  NoSuchElementException in accept_seat_requests
+2020-2-1  18:6:29  NoSuchElementException in accept_seat_requests
+2020-2-1  18:6:29  NoSuchElementException in accept_seat_requests
+2020-2-1  18:6:29  NoSuchElementException in accept_seat_requests
+2020-2-1  18:6:29  NoSuchElementException in accept_seat_requests
+2020-2-1  18:6:29  NoSuchElementException in accept_seat_requests
+2020-2-1  18:6:29  NoSuchElementException or StaleElementReferenceException in accept_seat_requests
+2020-2-1  18:6:29  NoSuchElementException or StaleElementReferenceException in accept_seat_requests
+2020-2-1  18:6:29  NoSuchElementException or StaleElementReferenceException in accept_seat_requests
+2020-2-1  18:6:29  NoSuchElementException or StaleElementReferenceException in accept_seat_requests
+2020-2-1  18:6:34  NoSuchElementException in accept_seat_requests
+2020-2-1  18:6:34  NoSuchElementException in accept_seat_requests
+2020-2-1  18:6:34  NoSuchElementException in accept_seat_requests
+2020-2-1  18:6:34  NoSuchElementException in accept_seat_requests
+2020-2-1  18:6:34  NoSuchElementException in accept_seat_requests
+2020-2-1  18:6:34  NoSuchElementException in accept_seat_requests
+2020-2-1  18:6:34  NoSuchElementException in accept_seat_requests
+2020-2-1  18:6:34  NoSuchElementException in accept_seat_requests
+2020-2-1  18:6:34  NoSuchElementException in accept_seat_requests
+2020-2-1  18:6:34  NoSuchElementException or StaleElementReferenceException in accept_seat_requests
+2020-2-1  18:6:34  NoSuchElementException or StaleElementReferenceException in accept_seat_requests
+2020-2-1  18:6:34  NoSuchElementException or StaleElementReferenceException in accept_seat_requests
+2020-2-1  18:6:34  NoSuchElementException or StaleElementReferenceException in accept_seat_requests
+2020-2-1  18:6:40  NoSuchElementException in accept_seat_requests
+2020-2-1  18:6:40  NoSuchElementException in accept_seat_requests
+2020-2-1  18:6:40  NoSuchElementException in accept_seat_requests
+2020-2-1  18:6:40  NoSuchElementException in accept_seat_requests
+2020-2-1  18:6:40  NoSuchElementException in accept_seat_requests
+2020-2-1  18:6:40  NoSuchElementException in accept_seat_requests
+2020-2-1  18:6:40  NoSuchElementException in accept_seat_requests
+2020-2-1  18:6:40  NoSuchElementException in accept_seat_requests
+2020-2-1  18:6:40  NoSuchElementException in accept_seat_requests
+2020-2-1  18:6:40  NoSuchElementException or StaleElementReferenceException in accept_seat_requests
+2020-2-1  18:6:40  NoSuchElementException or StaleElementReferenceException in accept_seat_requests
+2020-2-1  18:6:40  NoSuchElementException or StaleElementReferenceException in accept_seat_requests
+2020-2-1  18:6:40  NoSuchElementException or StaleElementReferenceException in accept_seat_requests
+2020-2-1  18:6:45  NoSuchElementException in accept_seat_requests
+2020-2-1  18:6:45  NoSuchElementException in accept_seat_requests
+2020-2-1  18:6:45  NoSuchElementException in accept_seat_requests
+2020-2-1  18:6:45  NoSuchElementException in accept_seat_requests
+2020-2-1  18:6:45  NoSuchElementException in accept_seat_requests
+2020-2-1  18:6:45  NoSuchElementException in accept_seat_requests
+2020-2-1  18:6:45  NoSuchElementException in accept_seat_requests
+2020-2-1  18:6:45  NoSuchElementException in accept_seat_requests
+2020-2-1  18:6:45  NoSuchElementException in accept_seat_requests
+2020-2-1  18:6:45  NoSuchElementException or StaleElementReferenceException in accept_seat_requests
+2020-2-1  18:6:45  NoSuchElementException or StaleElementReferenceException in accept_seat_requests
+2020-2-1  18:6:45  NoSuchElementException or StaleElementReferenceException in accept_seat_requests
+2020-2-1  18:6:45  NoSuchElementException or StaleElementReferenceException in accept_seat_requests
+2020-2-1  18:6:50  NoSuchElementException in accept_seat_requests
+2020-2-1  18:6:50  NoSuchElementException in accept_seat_requests
+2020-2-1  18:6:50  NoSuchElementException in accept_seat_requests
+2020-2-1  18:6:50  NoSuchElementException in accept_seat_requests
+2020-2-1  18:6:50  NoSuchElementException in accept_seat_requests
+2020-2-1  18:6:50  NoSuchElementException in accept_seat_requests
+2020-2-1  18:6:50  NoSuchElementException in accept_seat_requests
+2020-2-1  18:6:50  NoSuchElementException in accept_seat_requests
+2020-2-1  18:6:50  NoSuchElementException in accept_seat_requests
+2020-2-1  18:6:50  NoSuchElementException or StaleElementReferenceException in accept_seat_requests
+2020-2-1  18:6:50  NoSuchElementException or StaleElementReferenceException in accept_seat_requests
+2020-2-1  18:6:50  NoSuchElementException or StaleElementReferenceException in accept_seat_requests
+2020-2-1  18:6:50  NoSuchElementException or StaleElementReferenceException in accept_seat_requests
+2020-2-1  18:6:56  NoSuchElementException in accept_seat_requests
+2020-2-1  18:6:56  NoSuchElementException in accept_seat_requests
+2020-2-1  18:6:56  NoSuchElementException in accept_seat_requests
+2020-2-1  18:6:56  NoSuchElementException in accept_seat_requests
+2020-2-1  18:6:56  NoSuchElementException in accept_seat_requests
+2020-2-1  18:6:56  NoSuchElementException in accept_seat_requests
+2020-2-1  18:6:56  NoSuchElementException in accept_seat_requests
+2020-2-1  18:6:56  NoSuchElementException in accept_seat_requests
+2020-2-1  18:6:56  NoSuchElementException in accept_seat_requests
+2020-2-1  18:6:56  NoSuchElementException or StaleElementReferenceException in accept_seat_requests
+2020-2-1  18:6:56  NoSuchElementException or StaleElementReferenceException in accept_seat_requests
+2020-2-1  18:6:56  NoSuchElementException or StaleElementReferenceException in accept_seat_requests
+2020-2-1  18:6:56  NoSuchElementException or StaleElementReferenceException in accept_seat_requests
+2020-2-1  18:7:1  NoSuchElementException in accept_seat_requests
+2020-2-1  18:7:1  NoSuchElementException in accept_seat_requests
+2020-2-1  18:7:1  NoSuchElementException in accept_seat_requests
+2020-2-1  18:7:1  NoSuchElementException in accept_seat_requests
+2020-2-1  18:7:1  NoSuchElementException in accept_seat_requests
+2020-2-1  18:7:1  NoSuchElementException in accept_seat_requests
+2020-2-1  18:7:1  NoSuchElementException in accept_seat_requests
+2020-2-1  18:7:1  NoSuchElementException in accept_seat_requests
+2020-2-1  18:7:1  NoSuchElementException in accept_seat_requests
+2020-2-1  18:7:1  NoSuchElementException or StaleElementReferenceException in accept_seat_requests
+2020-2-1  18:7:1  NoSuchElementException or StaleElementReferenceException in accept_seat_requests
+2020-2-1  18:7:1  NoSuchElementException or StaleElementReferenceException in accept_seat_requests
+2020-2-1  18:7:1  NoSuchElementException or StaleElementReferenceException in accept_seat_requests
+2020-2-1  18:7:7  NoSuchElementException in accept_seat_requests
+2020-2-1  18:7:7  NoSuchElementException in accept_seat_requests
+2020-2-1  18:7:7  NoSuchElementException in accept_seat_requests
+2020-2-1  18:7:7  NoSuchElementException in accept_seat_requests
+2020-2-1  18:7:7  NoSuchElementException in accept_seat_requests
+2020-2-1  18:7:7  NoSuchElementException in accept_seat_requests
+2020-2-1  18:7:7  NoSuchElementException in accept_seat_requests
+2020-2-1  18:7:7  NoSuchElementException in accept_seat_requests
+2020-2-1  18:7:7  NoSuchElementException in accept_seat_requests
+2020-2-1  18:7:7  In-game start request accepted
+2020-2-1  18:7:7  NoSuchElementException or StaleElementReferenceException in accept_seat_requests
+2020-2-1  18:7:7  NoSuchElementException or StaleElementReferenceException in accept_seat_requests
+2020-2-1  18:7:7  NoSuchElementException or StaleElementReferenceException in accept_seat_requests
+2020-2-1  18:7:13  NoSuchElementException in accept_seat_requests
+2020-2-1  18:7:13  NoSuchElementException in accept_seat_requests
+2020-2-1  18:7:13  NoSuchElementException in accept_seat_requests
+2020-2-1  18:7:13  NoSuchElementException in accept_seat_requests
+2020-2-1  18:7:13  NoSuchElementException in accept_seat_requests
+2020-2-1  18:7:13  NoSuchElementException in accept_seat_requests
+2020-2-1  18:7:13  NoSuchElementException in accept_seat_requests
+2020-2-1  18:7:13  NoSuchElementException in accept_seat_requests
+2020-2-1  18:7:13  NoSuchElementException in accept_seat_requests
+2020-2-1  18:7:13  NoSuchElementException or StaleElementReferenceException in accept_seat_requests
+2020-2-1  18:7:13  NoSuchElementException or StaleElementReferenceException in accept_seat_requests
+2020-2-1  18:7:13  NoSuchElementException or StaleElementReferenceException in accept_seat_requests
+2020-2-1  18:7:13  NoSuchElementException or StaleElementReferenceException in accept_seat_requests
+2020-2-1  18:7:18  NoSuchElementException in accept_seat_requests
+2020-2-1  18:7:18  NoSuchElementException in accept_seat_requests
+2020-2-1  18:7:18  NoSuchElementException in accept_seat_requests
+2020-2-1  18:7:18  NoSuchElementException in accept_seat_requests
+2020-2-1  18:7:18  NoSuchElementException in accept_seat_requests
+2020-2-1  18:7:18  NoSuchElementException in accept_seat_requests
+2020-2-1  18:7:18  NoSuchElementException in accept_seat_requests
+2020-2-1  18:7:18  NoSuchElementException in accept_seat_requests
+2020-2-1  18:7:18  NoSuchElementException in accept_seat_requests
+2020-2-1  18:7:18  NoSuchElementException or StaleElementReferenceException in accept_seat_requests
+2020-2-1  18:7:18  NoSuchElementException or StaleElementReferenceException in accept_seat_requests
+2020-2-1  18:7:18  NoSuchElementException or StaleElementReferenceException in accept_seat_requests
+2020-2-1  18:7:18  NoSuchElementException or StaleElementReferenceException in accept_seat_requests
+2020-2-1  18:7:24  NoSuchElementException in accept_seat_requests
+2020-2-1  18:7:24  NoSuchElementException in accept_seat_requests
+2020-2-1  18:7:24  NoSuchElementException in accept_seat_requests
+2020-2-1  18:7:24  NoSuchElementException in accept_seat_requests
+2020-2-1  18:7:24  NoSuchElementException in accept_seat_requests
+2020-2-1  18:7:24  NoSuchElementException in accept_seat_requests
+2020-2-1  18:7:24  NoSuchElementException in accept_seat_requests
+2020-2-1  18:7:24  NoSuchElementException in accept_seat_requests
+2020-2-1  18:7:24  NoSuchElementException in accept_seat_requests
+2020-2-1  18:7:24  NoSuchElementException or StaleElementReferenceException in accept_seat_requests
+2020-2-1  18:7:24  NoSuchElementException or StaleElementReferenceException in accept_seat_requests
+2020-2-1  18:7:24  NoSuchElementException or StaleElementReferenceException in accept_seat_requests
+2020-2-1  18:7:24  NoSuchElementException or StaleElementReferenceException in accept_seat_requests
+2020-2-1  18:7:29  NoSuchElementException in accept_seat_requests
+2020-2-1  18:7:29  NoSuchElementException in accept_seat_requests
+2020-2-1  18:7:29  NoSuchElementException in accept_seat_requests
+2020-2-1  18:7:29  NoSuchElementException in accept_seat_requests
+2020-2-1  18:7:29  NoSuchElementException in accept_seat_requests
+2020-2-1  18:7:29  NoSuchElementException in accept_seat_requests
+2020-2-1  18:7:29  NoSuchElementException in accept_seat_requests
+2020-2-1  18:7:29  NoSuchElementException in accept_seat_requests
+2020-2-1  18:7:29  NoSuchElementException in accept_seat_requests
+2020-2-1  18:7:29  NoSuchElementException or StaleElementReferenceException in accept_seat_requests
+2020-2-1  18:7:29  NoSuchElementException or StaleElementReferenceException in accept_seat_requests
+2020-2-1  18:7:29  NoSuchElementException or StaleElementReferenceException in accept_seat_requests
+2020-2-1  18:7:29  NoSuchElementException or StaleElementReferenceException in accept_seat_requests
+2020-2-1  18:7:35  NoSuchElementException in accept_seat_requests
+2020-2-1  18:7:35  NoSuchElementException in accept_seat_requests
+2020-2-1  18:7:35  NoSuchElementException in accept_seat_requests
+2020-2-1  18:7:35  NoSuchElementException in accept_seat_requests
+2020-2-1  18:7:35  NoSuchElementException in accept_seat_requests
+2020-2-1  18:7:35  NoSuchElementException in accept_seat_requests
+2020-2-1  18:7:35  NoSuchElementException in accept_seat_requests
+2020-2-1  18:7:35  NoSuchElementException in accept_seat_requests
+2020-2-1  18:7:35  NoSuchElementException in accept_seat_requests
+2020-2-1  18:7:35  NoSuchElementException or StaleElementReferenceException in accept_seat_requests
+2020-2-1  18:7:35  NoSuchElementException or StaleElementReferenceException in accept_seat_requests
+2020-2-1  18:7:35  NoSuchElementException or StaleElementReferenceException in accept_seat_requests
+2020-2-1  18:7:35  NoSuchElementException or StaleElementReferenceException in accept_seat_requests
+2020-2-1  18:7:40  NoSuchElementException in accept_seat_requests
+2020-2-1  18:7:40  NoSuchElementException in accept_seat_requests
+2020-2-1  18:7:40  NoSuchElementException in accept_seat_requests
+2020-2-1  18:7:40  NoSuchElementException in accept_seat_requests
+2020-2-1  18:7:40  NoSuchElementException in accept_seat_requests
+2020-2-1  18:7:40  NoSuchElementException in accept_seat_requests
+2020-2-1  18:7:40  NoSuchElementException in accept_seat_requests
+2020-2-1  18:7:40  NoSuchElementException in accept_seat_requests
+2020-2-1  18:7:40  NoSuchElementException in accept_seat_requests
+2020-2-1  18:7:40  NoSuchElementException or StaleElementReferenceException in accept_seat_requests
+2020-2-1  18:7:40  NoSuchElementException or StaleElementReferenceException in accept_seat_requests
+2020-2-1  18:7:40  NoSuchElementException or StaleElementReferenceException in accept_seat_requests
+2020-2-1  18:7:40  NoSuchElementException or StaleElementReferenceException in accept_seat_requests
+2020-2-1  18:7:45  NoSuchElementException in accept_seat_requests
+2020-2-1  18:7:45  NoSuchElementException in accept_seat_requests
+2020-2-1  18:7:45  NoSuchElementException in accept_seat_requests
+2020-2-1  18:7:45  NoSuchElementException in accept_seat_requests
+2020-2-1  18:7:45  NoSuchElementException in accept_seat_requests
+2020-2-1  18:7:45  NoSuchElementException in accept_seat_requests
+2020-2-1  18:7:45  NoSuchElementException in accept_seat_requests
+2020-2-1  18:7:45  NoSuchElementException in accept_seat_requests
+2020-2-1  18:7:45  NoSuchElementException in accept_seat_requests
+2020-2-1  18:7:45  NoSuchElementException or StaleElementReferenceException in accept_seat_requests
+2020-2-1  18:7:45  NoSuchElementException or StaleElementReferenceException in accept_seat_requests
+2020-2-1  18:7:45  NoSuchElementException or StaleElementReferenceException in accept_seat_requests
+2020-2-1  18:7:45  NoSuchElementException or StaleElementReferenceException in accept_seat_requests
+2020-2-1  18:7:51  NoSuchElementException in accept_seat_requests
+2020-2-1  18:7:51  NoSuchElementException in accept_seat_requests
+2020-2-1  18:7:51  NoSuchElementException in accept_seat_requests
+2020-2-1  18:7:51  NoSuchElementException in accept_seat_requests
+2020-2-1  18:7:51  NoSuchElementException in accept_seat_requests
+2020-2-1  18:7:51  NoSuchElementException in accept_seat_requests
+2020-2-1  18:7:51  NoSuchElementException in accept_seat_requests
+2020-2-1  18:7:51  NoSuchElementException in accept_seat_requests
+2020-2-1  18:7:51  NoSuchElementException in accept_seat_requests
+2020-2-1  18:7:51  NoSuchElementException or StaleElementReferenceException in accept_seat_requests
+2020-2-1  18:7:51  NoSuchElementException or StaleElementReferenceException in accept_seat_requests
+2020-2-1  18:7:51  NoSuchElementException or StaleElementReferenceException in accept_seat_requests
+2020-2-1  18:7:51  NoSuchElementException or StaleElementReferenceException in accept_seat_requests
+2020-2-1  18:7:56  NoSuchElementException in accept_seat_requests
+2020-2-1  18:7:56  NoSuchElementException in accept_seat_requests
+2020-2-1  18:7:56  NoSuchElementException in accept_seat_requests
+2020-2-1  18:7:56  NoSuchElementException in accept_seat_requests
+2020-2-1  18:7:56  NoSuchElementException in accept_seat_requests
+2020-2-1  18:7:56  NoSuchElementException in accept_seat_requests
+2020-2-1  18:7:56  NoSuchElementException in accept_seat_requests
+2020-2-1  18:7:56  NoSuchElementException in accept_seat_requests
+2020-2-1  18:7:56  NoSuchElementException in accept_seat_requests
+2020-2-1  18:7:56  NoSuchElementException or StaleElementReferenceException in accept_seat_requests
+2020-2-1  18:7:56  NoSuchElementException or StaleElementReferenceException in accept_seat_requests
+2020-2-1  18:7:56  NoSuchElementException or StaleElementReferenceException in accept_seat_requests
+2020-2-1  18:7:56  NoSuchElementException or StaleElementReferenceException in accept_seat_requests
+2020-2-1  18:7:58  by Dalyer#5373:Bot logging off
+2020-2-1  18:8:20  Bot Online!Name: PokerBotID: 654538919257440296
+2020-2-1  18:8:23  Starting Webdriver
+2020-2-1  18:8:23  Bot Live
+2020-2-1  18:8:30  by Dalyer#5373:COMMAND: ping
+2020-2-1  18:8:32  by Dalyer#5373:Generating new poker game
+2020-2-1  18:8:35  Poker Link generated
+2020-2-1  18:8:40  NoSuchElementException in accept_seat_requests
+2020-2-1  18:8:40  NoSuchElementException in accept_seat_requests
+2020-2-1  18:8:40  NoSuchElementException in accept_seat_requests
+2020-2-1  18:8:40  NoSuchElementException in accept_seat_requests
+2020-2-1  18:8:40  NoSuchElementException in accept_seat_requests
+2020-2-1  18:8:40  NoSuchElementException in accept_seat_requests
+2020-2-1  18:8:40  NoSuchElementException in accept_seat_requests
+2020-2-1  18:8:40  NoSuchElementException in accept_seat_requests
+2020-2-1  18:8:40  NoSuchElementException in accept_seat_requests
+2020-2-1  18:8:40  NoSuchElementException or StaleElementReferenceException in accept_seat_requests
+2020-2-1  18:8:40  NoSuchElementException or StaleElementReferenceException in accept_seat_requests
+2020-2-1  18:8:40  NoSuchElementException or StaleElementReferenceException in accept_seat_requests
+2020-2-1  18:8:46  NoSuchElementException in accept_seat_requests
+2020-2-1  18:8:46  NoSuchElementException in accept_seat_requests
+2020-2-1  18:8:46  NoSuchElementException in accept_seat_requests
+2020-2-1  18:8:46  NoSuchElementException in accept_seat_requests
+2020-2-1  18:8:46  NoSuchElementException in accept_seat_requests
+2020-2-1  18:8:46  NoSuchElementException in accept_seat_requests
+2020-2-1  18:8:46  NoSuchElementException in accept_seat_requests
+2020-2-1  18:8:46  NoSuchElementException in accept_seat_requests
+2020-2-1  18:8:46  NoSuchElementException in accept_seat_requests
+2020-2-1  18:8:46  NoSuchElementException or StaleElementReferenceException in accept_seat_requests
+2020-2-1  18:8:46  NoSuchElementException or StaleElementReferenceException in accept_seat_requests
+2020-2-1  18:8:46  NoSuchElementException or StaleElementReferenceException in accept_seat_requests
+2020-2-1  18:8:52  NoSuchElementException in accept_seat_requests
+2020-2-1  18:8:52  Player added to the poker table
+2020-2-1  18:8:52  NoSuchElementException in accept_seat_requests
+2020-2-1  18:8:52  NoSuchElementException in accept_seat_requests
+2020-2-1  18:8:52  NoSuchElementException in accept_seat_requests
+2020-2-1  18:8:52  NoSuchElementException in accept_seat_requests
+2020-2-1  18:8:52  NoSuchElementException in accept_seat_requests
+2020-2-1  18:8:52  NoSuchElementException in accept_seat_requests
+2020-2-1  18:8:52  NoSuchElementException in accept_seat_requests
+2020-2-1  18:8:52  NoSuchElementException or StaleElementReferenceException in accept_seat_requests
+2020-2-1  18:8:52  NoSuchElementException or StaleElementReferenceException in accept_seat_requests
+2020-2-1  18:8:52  NoSuchElementException or StaleElementReferenceException in accept_seat_requests
+2020-2-1  18:8:58  NoSuchElementException in accept_seat_requests
+2020-2-1  18:8:58  NoSuchElementException in accept_seat_requests
+2020-2-1  18:8:58  Player added to the poker table
+2020-2-1  18:8:58  NoSuchElementException in accept_seat_requests
+2020-2-1  18:8:58  NoSuchElementException in accept_seat_requests
+2020-2-1  18:8:58  NoSuchElementException in accept_seat_requests
+2020-2-1  18:8:58  NoSuchElementException in accept_seat_requests
+2020-2-1  18:8:58  NoSuchElementException in accept_seat_requests
+2020-2-1  18:8:58  NoSuchElementException in accept_seat_requests
+2020-2-1  18:8:58  NoSuchElementException or StaleElementReferenceException in accept_seat_requests
+2020-2-1  18:8:58  NoSuchElementException or StaleElementReferenceException in accept_seat_requests
+2020-2-1  18:8:58  NoSuchElementException or StaleElementReferenceException in accept_seat_requests
+2020-2-1  18:9:4  NoSuchElementException in accept_seat_requests
+2020-2-1  18:9:4  NoSuchElementException in accept_seat_requests
+2020-2-1  18:9:4  NoSuchElementException in accept_seat_requests
+2020-2-1  18:9:4  NoSuchElementException in accept_seat_requests
+2020-2-1  18:9:4  NoSuchElementException in accept_seat_requests
+2020-2-1  18:9:4  NoSuchElementException in accept_seat_requests
+2020-2-1  18:9:4  NoSuchElementException in accept_seat_requests
+2020-2-1  18:9:4  NoSuchElementException in accept_seat_requests
+2020-2-1  18:9:4  NoSuchElementException in accept_seat_requests
+2020-2-1  18:9:4  In-game start request accepted
+2020-2-1  18:9:4  NoSuchElementException or StaleElementReferenceException in accept_seat_requests
+2020-2-1  18:9:4  NoSuchElementException or StaleElementReferenceException in accept_seat_requests
+2020-2-1  18:9:4  NoSuchElementException or StaleElementReferenceException in accept_seat_requests
+2020-2-1  18:9:9  NoSuchElementException in accept_seat_requests
+2020-2-1  18:9:9  NoSuchElementException in accept_seat_requests
+2020-2-1  18:9:9  NoSuchElementException in accept_seat_requests
+2020-2-1  18:9:9  NoSuchElementException in accept_seat_requests
+2020-2-1  18:9:9  NoSuchElementException in accept_seat_requests
+2020-2-1  18:9:9  NoSuchElementException in accept_seat_requests
+2020-2-1  18:9:9  NoSuchElementException in accept_seat_requests
+2020-2-1  18:9:9  NoSuchElementException in accept_seat_requests
+2020-2-1  18:9:9  NoSuchElementException in accept_seat_requests
+2020-2-1  18:9:9  NoSuchElementException or StaleElementReferenceException in accept_seat_requests
+2020-2-1  18:9:9  NoSuchElementException or StaleElementReferenceException in accept_seat_requests
+2020-2-1  18:9:9  NoSuchElementException or StaleElementReferenceException in accept_seat_requests
+2020-2-1  18:9:15  NoSuchElementException in accept_seat_requests
+2020-2-1  18:9:15  NoSuchElementException in accept_seat_requests
+2020-2-1  18:9:15  NoSuchElementException in accept_seat_requests
+2020-2-1  18:9:15  NoSuchElementException in accept_seat_requests
+2020-2-1  18:9:15  NoSuchElementException in accept_seat_requests
+2020-2-1  18:9:15  NoSuchElementException in accept_seat_requests
+2020-2-1  18:9:15  NoSuchElementException in accept_seat_requests
+2020-2-1  18:9:15  NoSuchElementException in accept_seat_requests
+2020-2-1  18:9:15  NoSuchElementException in accept_seat_requests
+2020-2-1  18:9:15  NoSuchElementException or StaleElementReferenceException in accept_seat_requests
+2020-2-1  18:9:15  NoSuchElementException or StaleElementReferenceException in accept_seat_requests
+2020-2-1  18:9:15  NoSuchElementException or StaleElementReferenceException in accept_seat_requests
+2020-2-1  18:9:20  NoSuchElementException in accept_seat_requests
+2020-2-1  18:9:20  NoSuchElementException in accept_seat_requests
+2020-2-1  18:9:20  NoSuchElementException in accept_seat_requests
+2020-2-1  18:9:20  NoSuchElementException in accept_seat_requests
+2020-2-1  18:9:20  NoSuchElementException in accept_seat_requests
+2020-2-1  18:9:20  NoSuchElementException in accept_seat_requests
+2020-2-1  18:9:20  NoSuchElementException in accept_seat_requests
+2020-2-1  18:9:20  NoSuchElementException in accept_seat_requests
+2020-2-1  18:9:20  NoSuchElementException in accept_seat_requests
+2020-2-1  18:9:20  NoSuchElementException or StaleElementReferenceException in accept_seat_requests
+2020-2-1  18:9:20  NoSuchElementException or StaleElementReferenceException in accept_seat_requests
+2020-2-1  18:9:20  NoSuchElementException or StaleElementReferenceException in accept_seat_requests
+2020-2-1  18:9:26  NoSuchElementException in accept_seat_requests
+2020-2-1  18:9:26  NoSuchElementException in accept_seat_requests
+2020-2-1  18:9:26  NoSuchElementException in accept_seat_requests
+2020-2-1  18:9:26  NoSuchElementException in accept_seat_requests
+2020-2-1  18:9:26  NoSuchElementException in accept_seat_requests
+2020-2-1  18:9:26  NoSuchElementException in accept_seat_requests
+2020-2-1  18:9:26  NoSuchElementException in accept_seat_requests
+2020-2-1  18:9:26  NoSuchElementException in accept_seat_requests
+2020-2-1  18:9:26  NoSuchElementException in accept_seat_requests
+2020-2-1  18:9:26  NoSuchElementException or StaleElementReferenceException in accept_seat_requests
+2020-2-1  18:9:26  NoSuchElementException or StaleElementReferenceException in accept_seat_requests
+2020-2-1  18:9:26  NoSuchElementException or StaleElementReferenceException in accept_seat_requests
+2020-2-1  18:9:31  NoSuchElementException in accept_seat_requests
+2020-2-1  18:9:31  NoSuchElementException in accept_seat_requests
+2020-2-1  18:9:31  NoSuchElementException in accept_seat_requests
+2020-2-1  18:9:31  NoSuchElementException in accept_seat_requests
+2020-2-1  18:9:31  NoSuchElementException in accept_seat_requests
+2020-2-1  18:9:31  NoSuchElementException in accept_seat_requests
+2020-2-1  18:9:31  NoSuchElementException in accept_seat_requests
+2020-2-1  18:9:31  NoSuchElementException in accept_seat_requests
+2020-2-1  18:9:31  NoSuchElementException in accept_seat_requests
+2020-2-1  18:9:31  NoSuchElementException or StaleElementReferenceException in accept_seat_requests
+2020-2-1  18:9:31  NoSuchElementException or StaleElementReferenceException in accept_seat_requests
+2020-2-1  18:9:31  NoSuchElementException or StaleElementReferenceException in accept_seat_requests
+2020-2-1  18:9:37  NoSuchElementException in accept_seat_requests
+2020-2-1  18:9:37  NoSuchElementException in accept_seat_requests
+2020-2-1  18:9:37  NoSuchElementException in accept_seat_requests
+2020-2-1  18:9:37  NoSuchElementException in accept_seat_requests
+2020-2-1  18:9:37  NoSuchElementException in accept_seat_requests
+2020-2-1  18:9:37  NoSuchElementException in accept_seat_requests
+2020-2-1  18:9:37  NoSuchElementException in accept_seat_requests
+2020-2-1  18:9:37  NoSuchElementException in accept_seat_requests
+2020-2-1  18:9:37  NoSuchElementException in accept_seat_requests
+2020-2-1  18:9:37  NoSuchElementException or StaleElementReferenceException in accept_seat_requests
+2020-2-1  18:9:37  NoSuchElementException or StaleElementReferenceException in accept_seat_requests
+2020-2-1  18:9:37  NoSuchElementException or StaleElementReferenceException in accept_seat_requests
+2020-2-1  18:9:42  NoSuchElementException in accept_seat_requests
+2020-2-1  18:9:42  NoSuchElementException in accept_seat_requests
+2020-2-1  18:9:42  NoSuchElementException in accept_seat_requests
+2020-2-1  18:9:42  NoSuchElementException in accept_seat_requests
+2020-2-1  18:9:42  NoSuchElementException in accept_seat_requests
+2020-2-1  18:9:42  NoSuchElementException in accept_seat_requests
+2020-2-1  18:9:42  NoSuchElementException in accept_seat_requests
+2020-2-1  18:9:42  NoSuchElementException in accept_seat_requests
+2020-2-1  18:9:42  NoSuchElementException in accept_seat_requests
+2020-2-1  18:9:42  NoSuchElementException or StaleElementReferenceException in accept_seat_requests
+2020-2-1  18:9:42  NoSuchElementException or StaleElementReferenceException in accept_seat_requests
+2020-2-1  18:9:42  NoSuchElementException or StaleElementReferenceException in accept_seat_requests
+2020-2-1  18:9:48  NoSuchElementException in accept_seat_requests
+2020-2-1  18:9:48  NoSuchElementException in accept_seat_requests
+2020-2-1  18:9:48  NoSuchElementException in accept_seat_requests
+2020-2-1  18:9:48  NoSuchElementException in accept_seat_requests
+2020-2-1  18:9:48  NoSuchElementException in accept_seat_requests
+2020-2-1  18:9:48  NoSuchElementException in accept_seat_requests
+2020-2-1  18:9:48  NoSuchElementException in accept_seat_requests
+2020-2-1  18:9:48  NoSuchElementException in accept_seat_requests
+2020-2-1  18:9:48  NoSuchElementException in accept_seat_requests
+2020-2-1  18:9:48  NoSuchElementException or StaleElementReferenceException in accept_seat_requests
+2020-2-1  18:9:48  NoSuchElementException or StaleElementReferenceException in accept_seat_requests
+2020-2-1  18:9:48  NoSuchElementException or StaleElementReferenceException in accept_seat_requests
+2020-2-1  18:9:53  NoSuchElementException in accept_seat_requests
+2020-2-1  18:9:53  NoSuchElementException in accept_seat_requests
+2020-2-1  18:9:53  NoSuchElementException in accept_seat_requests
+2020-2-1  18:9:53  NoSuchElementException in accept_seat_requests
+2020-2-1  18:9:53  NoSuchElementException in accept_seat_requests
+2020-2-1  18:9:53  NoSuchElementException in accept_seat_requests
+2020-2-1  18:9:53  NoSuchElementException in accept_seat_requests
+2020-2-1  18:9:53  NoSuchElementException in accept_seat_requests
+2020-2-1  18:9:53  NoSuchElementException in accept_seat_requests
+2020-2-1  18:9:53  NoSuchElementException or StaleElementReferenceException in accept_seat_requests
+2020-2-1  18:9:53  NoSuchElementException or StaleElementReferenceException in accept_seat_requests
+2020-2-1  18:9:53  NoSuchElementException or StaleElementReferenceException in accept_seat_requests
+2020-2-1  18:9:59  NoSuchElementException in accept_seat_requests
+2020-2-1  18:9:59  NoSuchElementException in accept_seat_requests
+2020-2-1  18:9:59  NoSuchElementException in accept_seat_requests
+2020-2-1  18:9:59  NoSuchElementException in accept_seat_requests
+2020-2-1  18:9:59  NoSuchElementException in accept_seat_requests
+2020-2-1  18:9:59  NoSuchElementException in accept_seat_requests
+2020-2-1  18:9:59  NoSuchElementException in accept_seat_requests
+2020-2-1  18:9:59  NoSuchElementException in accept_seat_requests
+2020-2-1  18:9:59  NoSuchElementException in accept_seat_requests
+2020-2-1  18:9:59  NoSuchElementException or StaleElementReferenceException in accept_seat_requests
+2020-2-1  18:9:59  NoSuchElementException or StaleElementReferenceException in accept_seat_requests
+2020-2-1  18:9:59  NoSuchElementException or StaleElementReferenceException in accept_seat_requests
+2020-2-1  18:10:4  NoSuchElementException in accept_seat_requests
+2020-2-1  18:10:4  NoSuchElementException in accept_seat_requests
+2020-2-1  18:10:4  NoSuchElementException in accept_seat_requests
+2020-2-1  18:10:4  NoSuchElementException in accept_seat_requests
+2020-2-1  18:10:4  NoSuchElementException in accept_seat_requests
+2020-2-1  18:10:4  NoSuchElementException in accept_seat_requests
+2020-2-1  18:10:4  NoSuchElementException in accept_seat_requests
+2020-2-1  18:10:4  NoSuchElementException in accept_seat_requests
+2020-2-1  18:10:4  NoSuchElementException in accept_seat_requests
+2020-2-1  18:10:4  NoSuchElementException or StaleElementReferenceException in accept_seat_requests
+2020-2-1  18:10:4  NoSuchElementException or StaleElementReferenceException in accept_seat_requests
+2020-2-1  18:10:4  NoSuchElementException or StaleElementReferenceException in accept_seat_requests
+2020-2-1  18:10:10  NoSuchElementException in accept_seat_requests
+2020-2-1  18:10:10  NoSuchElementException in accept_seat_requests
+2020-2-1  18:10:10  NoSuchElementException in accept_seat_requests
+2020-2-1  18:10:10  NoSuchElementException in accept_seat_requests
+2020-2-1  18:10:10  NoSuchElementException in accept_seat_requests
+2020-2-1  18:10:10  NoSuchElementException in accept_seat_requests
+2020-2-1  18:10:10  NoSuchElementException in accept_seat_requests
+2020-2-1  18:10:10  NoSuchElementException in accept_seat_requests
+2020-2-1  18:10:10  NoSuchElementException in accept_seat_requests
+2020-2-1  18:10:10  NoSuchElementException or StaleElementReferenceException in accept_seat_requests
+2020-2-1  18:10:10  NoSuchElementException or StaleElementReferenceException in accept_seat_requests
+2020-2-1  18:10:10  NoSuchElementException or StaleElementReferenceException in accept_seat_requests
+2020-2-1  18:10:15  NoSuchElementException in accept_seat_requests
+2020-2-1  18:10:15  NoSuchElementException in accept_seat_requests
+2020-2-1  18:10:15  NoSuchElementException in accept_seat_requests
+2020-2-1  18:10:15  NoSuchElementException in accept_seat_requests
+2020-2-1  18:10:15  NoSuchElementException in accept_seat_requests
+2020-2-1  18:10:15  NoSuchElementException in accept_seat_requests
+2020-2-1  18:10:15  NoSuchElementException in accept_seat_requests
+2020-2-1  18:10:15  NoSuchElementException in accept_seat_requests
+2020-2-1  18:10:15  NoSuchElementException in accept_seat_requests
+2020-2-1  18:10:15  NoSuchElementException or StaleElementReferenceException in accept_seat_requests
+2020-2-1  18:10:15  NoSuchElementException or StaleElementReferenceException in accept_seat_requests
+2020-2-1  18:10:15  NoSuchElementException or StaleElementReferenceException in accept_seat_requests
+2020-2-1  18:10:21  NoSuchElementException in accept_seat_requests
+2020-2-1  18:10:21  NoSuchElementException in accept_seat_requests
+2020-2-1  18:10:21  NoSuchElementException in accept_seat_requests
+2020-2-1  18:10:21  NoSuchElementException in accept_seat_requests
+2020-2-1  18:10:21  NoSuchElementException in accept_seat_requests
+2020-2-1  18:10:21  NoSuchElementException in accept_seat_requests
+2020-2-1  18:10:21  NoSuchElementException in accept_seat_requests
+2020-2-1  18:10:21  NoSuchElementException in accept_seat_requests
+2020-2-1  18:10:21  NoSuchElementException in accept_seat_requests
+2020-2-1  18:10:21  NoSuchElementException or StaleElementReferenceException in accept_seat_requests
+2020-2-1  18:10:21  NoSuchElementException or StaleElementReferenceException in accept_seat_requests
+2020-2-1  18:10:21  NoSuchElementException or StaleElementReferenceException in accept_seat_requests
+2020-2-1  18:10:26  NoSuchElementException in accept_seat_requests
+2020-2-1  18:10:26  NoSuchElementException in accept_seat_requests
+2020-2-1  18:10:26  NoSuchElementException in accept_seat_requests
+2020-2-1  18:10:26  NoSuchElementException in accept_seat_requests
+2020-2-1  18:10:26  NoSuchElementException in accept_seat_requests
+2020-2-1  18:10:26  NoSuchElementException in accept_seat_requests
+2020-2-1  18:10:26  NoSuchElementException in accept_seat_requests
+2020-2-1  18:10:26  NoSuchElementException in accept_seat_requests
+2020-2-1  18:10:26  NoSuchElementException in accept_seat_requests
+2020-2-1  18:10:26  NoSuchElementException or StaleElementReferenceException in accept_seat_requests
+2020-2-1  18:10:26  NoSuchElementException or StaleElementReferenceException in accept_seat_requests
+2020-2-1  18:10:26  NoSuchElementException or StaleElementReferenceException in accept_seat_requests
+2020-2-1  18:10:31  NoSuchElementException in accept_seat_requests
+2020-2-1  18:10:31  NoSuchElementException in accept_seat_requests
+2020-2-1  18:10:31  NoSuchElementException in accept_seat_requests
+2020-2-1  18:10:31  NoSuchElementException in accept_seat_requests
+2020-2-1  18:10:31  NoSuchElementException in accept_seat_requests
+2020-2-1  18:10:31  NoSuchElementException in accept_seat_requests
+2020-2-1  18:10:31  NoSuchElementException in accept_seat_requests
+2020-2-1  18:10:31  NoSuchElementException in accept_seat_requests
+2020-2-1  18:10:31  NoSuchElementException in accept_seat_requests
+2020-2-1  18:10:31  NoSuchElementException or StaleElementReferenceException in accept_seat_requests
+2020-2-1  18:10:31  NoSuchElementException or StaleElementReferenceException in accept_seat_requests
+2020-2-1  18:10:31  NoSuchElementException or StaleElementReferenceException in accept_seat_requests
+2020-2-1  18:10:37  NoSuchElementException in accept_seat_requests
+2020-2-1  18:10:37  NoSuchElementException in accept_seat_requests
+2020-2-1  18:10:37  NoSuchElementException in accept_seat_requests
+2020-2-1  18:10:37  NoSuchElementException in accept_seat_requests
+2020-2-1  18:10:37  NoSuchElementException in accept_seat_requests
+2020-2-1  18:10:37  NoSuchElementException in accept_seat_requests
+2020-2-1  18:10:37  NoSuchElementException in accept_seat_requests
+2020-2-1  18:10:37  NoSuchElementException in accept_seat_requests
+2020-2-1  18:10:37  NoSuchElementException in accept_seat_requests
+2020-2-1  18:10:37  NoSuchElementException or StaleElementReferenceException in accept_seat_requests
+2020-2-1  18:10:37  NoSuchElementException or StaleElementReferenceException in accept_seat_requests
+2020-2-1  18:10:42  NoSuchElementException in accept_seat_requests
+2020-2-1  18:10:42  NoSuchElementException in accept_seat_requests
+2020-2-1  18:10:42  NoSuchElementException in accept_seat_requests
+2020-2-1  18:10:42  NoSuchElementException in accept_seat_requests
+2020-2-1  18:10:42  NoSuchElementException in accept_seat_requests
+2020-2-1  18:10:42  NoSuchElementException in accept_seat_requests
+2020-2-1  18:10:42  NoSuchElementException in accept_seat_requests
+2020-2-1  18:10:42  NoSuchElementException in accept_seat_requests
+2020-2-1  18:10:42  NoSuchElementException in accept_seat_requests
+2020-2-1  18:10:42  NoSuchElementException or StaleElementReferenceException in accept_seat_requests
+2020-2-1  18:10:42  NoSuchElementException or StaleElementReferenceException in accept_seat_requests
+2020-2-1  18:10:48  NoSuchElementException in accept_seat_requests
+2020-2-1  18:10:48  NoSuchElementException in accept_seat_requests
+2020-2-1  18:10:48  NoSuchElementException in accept_seat_requests
+2020-2-1  18:10:48  NoSuchElementException in accept_seat_requests
+2020-2-1  18:10:48  NoSuchElementException in accept_seat_requests
+2020-2-1  18:10:48  NoSuchElementException in accept_seat_requests
+2020-2-1  18:10:48  NoSuchElementException in accept_seat_requests
+2020-2-1  18:10:48  NoSuchElementException in accept_seat_requests
+2020-2-1  18:10:48  NoSuchElementException in accept_seat_requests
+2020-2-1  18:10:48  NoSuchElementException or StaleElementReferenceException in accept_seat_requests
+2020-2-1  18:10:48  NoSuchElementException or StaleElementReferenceException in accept_seat_requests
+2020-2-1  18:10:53  NoSuchElementException in accept_seat_requests
+2020-2-1  18:10:53  NoSuchElementException in accept_seat_requests
+2020-2-1  18:10:53  NoSuchElementException in accept_seat_requests
+2020-2-1  18:10:53  NoSuchElementException in accept_seat_requests
+2020-2-1  18:10:53  NoSuchElementException in accept_seat_requests
+2020-2-1  18:10:53  NoSuchElementException in accept_seat_requests
+2020-2-1  18:10:53  NoSuchElementException in accept_seat_requests
+2020-2-1  18:10:53  NoSuchElementException in accept_seat_requests
+2020-2-1  18:10:53  NoSuchElementException in accept_seat_requests
+2020-2-1  18:10:53  NoSuchElementException or StaleElementReferenceException in accept_seat_requests
+2020-2-1  18:10:53  NoSuchElementException or StaleElementReferenceException in accept_seat_requests
+2020-2-1  18:10:59  NoSuchElementException in accept_seat_requests
+2020-2-1  18:10:59  NoSuchElementException in accept_seat_requests
+2020-2-1  18:10:59  NoSuchElementException in accept_seat_requests
+2020-2-1  18:10:59  NoSuchElementException in accept_seat_requests
+2020-2-1  18:10:59  NoSuchElementException in accept_seat_requests
+2020-2-1  18:10:59  NoSuchElementException in accept_seat_requests
+2020-2-1  18:10:59  NoSuchElementException in accept_seat_requests
+2020-2-1  18:10:59  NoSuchElementException in accept_seat_requests
+2020-2-1  18:10:59  NoSuchElementException in accept_seat_requests
+2020-2-1  18:10:59  NoSuchElementException or StaleElementReferenceException in accept_seat_requests
+2020-2-1  18:11:4  NoSuchElementException in accept_seat_requests
+2020-2-1  18:11:4  NoSuchElementException in accept_seat_requests
+2020-2-1  18:11:4  NoSuchElementException in accept_seat_requests
+2020-2-1  18:11:4  NoSuchElementException in accept_seat_requests
+2020-2-1  18:11:4  NoSuchElementException in accept_seat_requests
+2020-2-1  18:11:4  NoSuchElementException in accept_seat_requests
+2020-2-1  18:11:4  NoSuchElementException in accept_seat_requests
+2020-2-1  18:11:4  NoSuchElementException in accept_seat_requests
+2020-2-1  18:11:4  NoSuchElementException in accept_seat_requests
+2020-2-1  18:11:4  NoSuchElementException or StaleElementReferenceException in accept_seat_requests
+2020-2-1  18:11:10  NoSuchElementException in accept_seat_requests
+2020-2-1  18:11:10  NoSuchElementException in accept_seat_requests
+2020-2-1  18:11:10  NoSuchElementException in accept_seat_requests
+2020-2-1  18:11:10  NoSuchElementException in accept_seat_requests
+2020-2-1  18:11:10  NoSuchElementException in accept_seat_requests
+2020-2-1  18:11:10  NoSuchElementException in accept_seat_requests
+2020-2-1  18:11:10  NoSuchElementException in accept_seat_requests
+2020-2-1  18:11:10  NoSuchElementException in accept_seat_requests
+2020-2-1  18:11:10  NoSuchElementException in accept_seat_requests
+2020-2-1  18:11:10  NoSuchElementException or StaleElementReferenceException in accept_seat_requests
+2020-2-1  18:11:15  NoSuchElementException in accept_seat_requests
+2020-2-1  18:11:15  NoSuchElementException in accept_seat_requests
+2020-2-1  18:11:15  NoSuchElementException in accept_seat_requests
+2020-2-1  18:11:15  NoSuchElementException in accept_seat_requests
+2020-2-1  18:11:15  NoSuchElementException in accept_seat_requests
+2020-2-1  18:11:15  NoSuchElementException in accept_seat_requests
+2020-2-1  18:11:15  NoSuchElementException in accept_seat_requests
+2020-2-1  18:11:15  NoSuchElementException in accept_seat_requests
+2020-2-1  18:11:15  NoSuchElementException in accept_seat_requests
+2020-2-1  18:11:15  NoSuchElementException or StaleElementReferenceException in accept_seat_requests
+2020-2-1  18:11:21  NoSuchElementException in accept_seat_requests
+2020-2-1  18:11:21  NoSuchElementException in accept_seat_requests
+2020-2-1  18:11:21  NoSuchElementException in accept_seat_requests
+2020-2-1  18:11:21  NoSuchElementException in accept_seat_requests
+2020-2-1  18:11:21  NoSuchElementException in accept_seat_requests
+2020-2-1  18:11:21  NoSuchElementException in accept_seat_requests
+2020-2-1  18:11:21  NoSuchElementException in accept_seat_requests
+2020-2-1  18:11:21  NoSuchElementException in accept_seat_requests
+2020-2-1  18:11:21  NoSuchElementException in accept_seat_requests
+2020-2-1  18:11:21  NoSuchElementException or StaleElementReferenceException in accept_seat_requests
+2020-2-1  18:11:26  NoSuchElementException in accept_seat_requests
+2020-2-1  18:11:26  NoSuchElementException in accept_seat_requests
+2020-2-1  18:11:26  NoSuchElementException in accept_seat_requests
+2020-2-1  18:11:26  NoSuchElementException in accept_seat_requests
+2020-2-1  18:11:26  NoSuchElementException in accept_seat_requests
+2020-2-1  18:11:26  NoSuchElementException in accept_seat_requests
+2020-2-1  18:11:26  NoSuchElementException in accept_seat_requests
+2020-2-1  18:11:26  NoSuchElementException in accept_seat_requests
+2020-2-1  18:11:26  NoSuchElementException in accept_seat_requests
+2020-2-1  18:11:26  NoSuchElementException or StaleElementReferenceException in accept_seat_requests
+2020-2-1  18:11:30  by Dalyer#5373:end command
+2020-2-1  18:11:31  Parsing game logs
+2020-2-1  18:11:31  Retrieving leader board players
+2020-2-1  18:11:31  Updating scores
+2020-2-1  18:11:48  by Dalyer#5373:COMMAND: ping
