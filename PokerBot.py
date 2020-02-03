@@ -189,12 +189,15 @@ async def errors(ctx):
 
 
 @client.command(pass_context=True)
-async def get_log(ctx, time_stamp=None, message_author=None, key_word=None, num_logs=1):
+async def get_log(ctx, num_logs='1', time_stamp=None, message_author=None, key_word=None):
+    # num_logs=* will retrieve all matching logs
     log("get_log command", ctx)
+
     if time_stamp and message_author and key_word is None:
         log("Improper input given (get_log)")
         await client.say("Include at least one search value such as, a timestamp, message author, or keyword")
     logs_found = search_log(time_stamp=time_stamp, message_author=None, key_word=None, num_logs=num_logs)
+
     if logs_found is not None:
         for i in logs_found:
             await client.say(i)
@@ -314,9 +317,18 @@ def log(message, context=None):
     print(log_message)
 
 
-def search_log(time_stamp=None, message_author=None, key_word=None, num_logs=1):
-    return
-    # TODO implement
+def search_log(time_stamp=None, message_author=None, key_word=None, num_logs='1'):
+    # TODO implement quick-sort algorithm here for when file size gets huge
+    matching_logs = []
+    with open(LOG_FILE, encoding='utf-8', mode='r') as f:
+        for i in f:             # very slow method of sorting runs at O(n)
+            if (time_stamp or message_author or key_word) in i:
+                matching_logs.append(i)
+
+    if num_logs != '*':
+        matching_logs = matching_logs[:int(num_logs)]
+
+    return matching_logs
 
 
 client.run(TOKEN)
