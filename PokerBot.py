@@ -188,6 +188,15 @@ async def errors(ctx):
                      "Just send me a DM with any errors at Dalyer#5373 or submit and issue at https://github.com/Dalyer/PokerDiscordBot")
 
 
+@client.command(pass_context=True)
+async def get_log(ctx, time_stamp=None, message_author=None, key_word=None):
+    log("get_log command", ctx)
+    if time_stamp and message_author and key_word is None:
+        log("Improper input given (get_log)")
+        await client.say("Include at least one search value such as, a timestamp, message author, or keyword")
+    await client.say("test string")
+
+
 # #######EVENTS########
 
 # Called when the bot connects to the server
@@ -297,6 +306,10 @@ def log(message, context=None):
     with open(LOG_FILE, encoding='utf-8', mode='a') as f:
         f.writelines(log_message + "\n")
     print(log_message)
+
+
+def search_log(time_stamp=None, message_author=None, key_word=None, num_logs=1):
+    pass
 
 
 client.run(TOKEN)
