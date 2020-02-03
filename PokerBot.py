@@ -316,7 +316,7 @@ def log(message, context=None):
 
 def search_log(time_stamp=None, message_author=None, key_word=None, num_logs=1):
     return
-    #TODO implement
+    # TODO implement
 
 
 client.run(TOKEN)
