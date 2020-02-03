@@ -189,12 +189,18 @@ async def errors(ctx):
 
 
 @client.command(pass_context=True)
-async def get_log(ctx, time_stamp=None, message_author=None, key_word=None):
+async def get_log(ctx, time_stamp=None, message_author=None, key_word=None, num_logs=1):
     log("get_log command", ctx)
     if time_stamp and message_author and key_word is None:
         log("Improper input given (get_log)")
         await client.say("Include at least one search value such as, a timestamp, message author, or keyword")
-    await client.say("test string")
+    logs_found = search_log(time_stamp=time_stamp, message_author=None, key_word=None, num_logs=num_logs)
+    if logs_found is not None:
+        for i in logs_found:
+            await client.say(i)
+    else:
+        log("No logs of that description found (get_log)")
+        await client.say("No logs of that description found")
 
 
 # #######EVENTS########
@@ -309,7 +315,8 @@ def log(message, context=None):
 
 
 def search_log(time_stamp=None, message_author=None, key_word=None, num_logs=1):
-    pass
+    return
+    #TODO implement
 
 
 client.run(TOKEN)
